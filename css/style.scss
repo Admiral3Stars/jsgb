@@ -1,7 +1,9 @@
 // Params
 $container: 1000px;
 $normalsize: 16px;
-$h1size: 22px;
+$h1size: 24px;
+$h2size: 20px;
+$h3size: 18px;
 
 /* CeraStencilPRO start */
 @font-face {
@@ -80,11 +82,26 @@ $h1size: 22px;
   .code{
     color: rgb(3, 3, 134);
   }
+  .attr{
+    color: rgb(255, 1, 1);
+  }
   .variable{
     color: rgb(37, 149, 201);
   }
   .comment{
     color: rgb(0, 83, 0);
+  }
+  .text-link{
+    text-decoration: none;
+    color: #e9967a;
+  }
+
+  .text-link:hover{
+    color: #ff0101;
+  }
+
+  .text-link:active{
+    color: #e9967a;
   }
 
   .web-site{
@@ -99,6 +116,16 @@ $h1size: 22px;
     text-align: center;
     font-weight: 500;
     font-size: $h1size;
+  }
+
+  .content-h2{
+    font-weight: bold;
+    font-size: $h2size;
+  }
+
+  .content-h3{
+    font-weight: bold;
+    font-size: $h3size;
   }
 
   .section-tasks{
@@ -169,6 +196,14 @@ $h1size: 22px;
 
   .disable-button:hover{
     background-color: #fff;
+  }
+
+  .content-form-answer{
+    font-family: monospace, "Arial", sans-serif;
+  }
+
+  .form-answer-header{
+    text-align: left;
   }
 
   @media(max-width: 999px){

@@ -53,12 +53,29 @@
   color: #030386;
 }
 
+.attr {
+  color: #ff0101;
+}
+
 .variable {
   color: #2595c9;
 }
 
 .comment {
   color: #005300;
+}
+
+.text-link {
+  text-decoration: none;
+  color: #e9967a;
+}
+
+.text-link:hover {
+  color: #ff0101;
+}
+
+.text-link:active {
+  color: #e9967a;
 }
 
 .web-site {
@@ -72,7 +89,17 @@
 .content-header {
   text-align: center;
   font-weight: 500;
-  font-size: 22px;
+  font-size: 24px;
+}
+
+.content-h2 {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.content-h3 {
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .section-tasks {
@@ -154,6 +181,14 @@
 
 .disable-button:hover {
   background-color: #fff;
+}
+
+.content-form-answer {
+  font-family: monospace, "Arial", sans-serif;
+}
+
+.form-answer-header {
+  text-align: left;
 }
 
 @media (max-width: 999px) {
