@@ -3,10 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
     <script src="js/script.js"></script>
 </head>
-<body>
-    
+<body class="web-site">
+    <header></header>
+    <main class="site-content">
+        <h1 class="content-header">Wellcome to my web-site, teacher.</h1>
+        <p>Задача #1. Задать температуру в&nbsp;градусах по&nbsp;Цельсию. Вывести в&nbsp;alert соответствующую температуру в&nbsp;градусах по&nbsp;Фаренгейту. Подсказка: расчёт идёт по&nbsp;формуле: Tf = (9&nbsp;/ 5) * Tc + 32, где Tf&nbsp;&mdash; температура по&nbsp;Фаренгейту, Tc&nbsp;&mdash; температура по&nbsp;Цельсию.</p>
+        <form class="first-task-form content-form" action="javascript:void(0)">
+            <label>Введите температуру (&deg;C): <input class="first-task-input content-form-number" step="0.01" type="number"></label>
+            <button class="first-task-button content-form-button" onclick="getTemp();">Посчитать</button>
+        </form>
+    </main>
+    <footer></footer>
 </body>
 </html>
