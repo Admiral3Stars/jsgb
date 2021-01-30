@@ -77,6 +77,16 @@ $h1size: 22px;
   }
   /* CeraStencilPRO end */
 
+  .code{
+    color: rgb(3, 3, 134);
+  }
+  .variable{
+    color: rgb(37, 149, 201);
+  }
+  .comment{
+    color: rgb(0, 83, 0);
+  }
+
   .web-site{
     width: $container;
     margin: 0 auto;
@@ -89,6 +99,12 @@ $h1size: 22px;
     text-align: center;
     font-weight: 500;
     font-size: $h1size;
+  }
+
+  .section-tasks{
+    padding: 0 0 10px 0;
+    border-bottom: 1px solid rgba(164,175,221,.2);
+    box-sizing: border-box;
   }
 
   .content-form-number{
@@ -107,7 +123,8 @@ $h1size: 22px;
     background-color: #fffacd;
   }
 
-  .content-form-button{
+  .content-form-button,
+  .content-section-button{
     padding: 6px;
     box-sizing: border-box;
     font-family: "CeraStencilPRO", "Arial", sans-serif;
@@ -120,10 +137,34 @@ $h1size: 22px;
     cursor: pointer;
   }
 
-  .content-form-button:hover{
+  .content-form-button:hover,
+  .content-section-button:hover{
     background-color: #fffacd;
   }
 
-  .content-form-button:active{
+  .content-form-button:active,
+  .content-section-button:active{
     background-color: #fff;
+  }
+
+  .content-section-result{
+    display: inline-block;
+    background: #fffacd;
+  }
+
+  .second-task-form{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .second-task-button{
+    min-width: 170px;
+  }
+
+  .second-task-result{
+    flex-grow: 1;
+    margin: 0 0 0 20px;
+    padding: 5px 10px;
+    height: 150px;
   }
