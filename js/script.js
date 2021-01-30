@@ -1,6 +1,12 @@
 function insertValueToSelector($selector, $value, $operator = "add more"){
-    if ($operator == "equal") document.querySelector($selector).innerHTML = $value;
-    if ($operator == "add more") document.querySelector($selector).innerHTML += $value;
+    let tag = document.querySelector($selector);
+    if (tag){
+        if ($operator == "equal") tag.innerHTML = $value;
+        if ($operator == "add more") tag.innerHTML += $value;
+    }else{
+        alert("Обратитесь к администратору и скажите что не найден селектор.");
+        return false;
+    }
 }
 
 function getTemp(){
@@ -31,17 +37,32 @@ function getTemp(){
 }
 
 function getNameAdmin(){
+    // Объявляем переменные
     let admin,
         name;
     name = "Василий";
     admin = name;
 
+    // Выводим результат
     setTimeout(() => {  insertValueToSelector(".second-task-result", "<span class=\"code\">var</span> <span class=\"variable\">admin</span>, <span class=\"variable\">name</span>; // <span class=\"comment\">Объявляем переменные</span><br>", "equal"); }, 700);
     setTimeout(() => {  insertValueToSelector(".second-task-result", "<span class=\"variable\">name</span> = \"Василий\"; // <span class=\"comment\">Вносим значение переменной name</span><br>"); }, 1400);
     setTimeout(() => {  insertValueToSelector(".second-task-result", "<span class=\"variable\">admin</span> = <span class=\"variable\">name</span>; // <span class=\"comment\">Присваиваем значение переменной name переменной admin</span><br>"); }, 2100);
     setTimeout(() => {  insertValueToSelector(".second-task-result", "<span class=\"code\">alert(</span><span class=\"variable\">admin</span><span class=\"code\">)</span>; // <span class=\"comment\">Выводим результат</span><br>"); }, 2800);
     setTimeout(() => {  
         alert(admin); 
-        document.querySelector('.content-section-button').disabled = false;
+        document.querySelector('.second-task-button').disabled = false;
     }, 3500);
+}
+
+function equalJs(){
+    // Объявляем переменные
+    let js = 1000 + "108";
+
+    // Выводим результат
+    setTimeout(() => {  insertValueToSelector(".third-task-result", "<span class=\"code\">var</span> <span class=\"variable\">js</span> = 1000 + \"108\"; // <span class=\"comment\">Объявляем переменные</span><br>", "equal"); }, 700);
+    setTimeout(() => {  insertValueToSelector(".third-task-result", "<span class=\"code\">alert(</span><span class=\"variable\">js</span><span class=\"code\">)</span>; // <span class=\"comment\">Выводим результат</span><br>"); }, 1400);
+    setTimeout(() => {  
+        alert(js); 
+        document.querySelector('.third-task-button').disabled = false;
+    }, 2100);
 }
