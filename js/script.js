@@ -37,6 +37,10 @@ function getTemp(){
 }
 
 function getNameAdmin(){
+    //Блокируем кнопку
+    document.querySelector('.second-task-button').disabled = true;
+    document.querySelector('.second-task-button').classList.add("disable-button");
+
     // Объявляем переменные
     let admin,
         name;
@@ -51,10 +55,15 @@ function getNameAdmin(){
     setTimeout(() => {  
         alert(admin); 
         document.querySelector('.second-task-button').disabled = false;
+        document.querySelector('.second-task-button').classList.remove("disable-button");
     }, 3500);
 }
 
 function equalJs(){
+    // Блокируем кнопку
+    document.querySelector('.third-task-button').disabled = true;
+    document.querySelector('.third-task-button').classList.add("disable-button");
+
     // Объявляем переменные
     let js = 1000 + "108";
 
@@ -64,5 +73,6 @@ function equalJs(){
     setTimeout(() => {  
         alert(js); 
         document.querySelector('.third-task-button').disabled = false;
+        document.querySelector('.third-task-button').classList.remove("disable-button");
     }, 2100);
 }

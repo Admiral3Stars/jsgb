@@ -152,6 +152,10 @@
   overflow-y: auto;
 }
 
+.disable-button:hover {
+  background-color: #fff;
+}
+
 @media (max-width: 999px) {
   .web-site {
     max-width: 100%;
