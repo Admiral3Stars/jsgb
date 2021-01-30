@@ -24,7 +24,7 @@ function getTemp(){
     }
 
     // Проверим, всё ли хорошо с типами. Если да, рассчитаем результат
-    if (parseFloat(celsium)){
+    if (celsium && (parseFloat(celsium) || celsium == 0)){
         fahrenheit = (9 / 5) * celsium + 32;
     }else{
         if (!celsium) alert("Похоже Вы не ввели число. Попробуйте ещё разок и, если у Вас не получится, обратитесь к администратору.");
