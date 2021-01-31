@@ -113,12 +113,18 @@ $h3size: 18px;
   }
 
   .content-header{
+    margin: 10px 0;
     text-align: center;
     font-weight: 500;
     font-size: $h1size;
   }
 
+  .content-text{
+    margin: 10px 0;
+  }
+
   .content-h2{
+    margin: 10px 0;
     font-weight: bold;
     font-size: $h2size;
   }
@@ -221,7 +227,7 @@ $h3size: 18px;
     }
 
     .content-form-button{
-      margin: 10px 0;
+      margin: 10px 0 0 0;
     }
 
     .content-section-button{

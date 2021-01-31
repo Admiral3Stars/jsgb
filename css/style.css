@@ -87,12 +87,18 @@
 }
 
 .content-header {
+  margin: 10px 0;
   text-align: center;
   font-weight: 500;
   font-size: 24px;
 }
 
+.content-text {
+  margin: 10px 0;
+}
+
 .content-h2 {
+  margin: 10px 0;
   font-weight: bold;
   font-size: 20px;
 }
@@ -214,7 +220,7 @@
             align-items: center;
   }
   .content-form-button {
-    margin: 10px 0;
+    margin: 10px 0 0 0;
   }
   .content-section-button {
     margin: 0 auto 10px auto;
