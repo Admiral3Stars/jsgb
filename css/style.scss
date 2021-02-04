@@ -1,0 +1,246 @@
+// Params
+$container: 1000px;
+$normalsize: 16px;
+$h1size: 24px;
+$h2size: 20px;
+$h3size: 18px;
+
+/* CeraStencilPRO start */
+@font-face {
+    font-family: 'CeraStencilPRO';
+    src:url('../fonts/CeraStencilPRO-Light.eot');
+    src: local('☞Cera Stencil PRO Light'), local('CeraStencilPRO-Light'),
+       url('../fonts/CeraStencilPRO-Light.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/CeraStencilPRO-Light.woff2') format('woff2'),
+       url('../fonts/CeraStencilPRO-Light.woff') format('woff'),
+       url('../fonts/CeraStencilPRO-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'CeraStencilPRO';
+    src:url('../fonts/CeraStencilPRO-Regular.eot');
+    src: local('☞Cera Stencil PRO'), local('CeraStencilPRO-Regular'),
+       url('../fonts/CeraStencilPRO-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/CeraStencilPRO-Regular.woff2') format('woff2'),
+       url('../fonts/CeraStencilPRO-Regular.woff') format('woff'),
+       url('../fonts/CeraStencilPRO-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'CeraStencilPRO';
+    src:url('../fonts/CeraStencilPRO-Thin.eot');
+    src: local('☞Cera Stencil PRO Thin'), local('CeraStencilPRO-Thin'),
+       url('../fonts/CeraStencilPRO-Thin.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/CeraStencilPRO-Thin.woff2') format('woff2'),
+       url('../fonts/CeraStencilPRO-Thin.woff') format('woff'),
+       url('../fonts/CeraStencilPRO-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'CeraStencilPRO';
+    src:url('../fonts/CeraStencilPRO-Black.eot');
+    src: local('☞Cera Stencil PRO Black'), local('CeraStencilPRO-Black'),
+       url('../fonts/CeraStencilPRO-Black.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/CeraStencilPRO-Black.woff2') format('woff2'),
+       url('../fonts/CeraStencilPRO-Black.woff') format('woff'),
+       url('../fonts/CeraStencilPRO-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'CeraStencilPRO';
+    src:url('../fonts/CeraStencilPRO-Bold.eot');
+    src: local('☞Cera Stencil PRO Bold'), local('CeraStencilPRO-Bold'),
+       url('../fonts/CeraStencilPRO-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/CeraStencilPRO-Bold.woff2') format('woff2'),
+       url('../fonts/CeraStencilPRO-Bold.woff') format('woff'),
+       url('../fonts/CeraStencilPRO-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'CeraStencilPRO';
+    src:url('../fonts/CeraStencilPRO-Medium.eot');
+    src: local('☞Cera Stencil PRO Medium'), local('CeraStencilPRO-Medium'),
+       url('../fonts/CeraStencilPRO-Medium.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/CeraStencilPRO-Medium.woff2') format('woff2'),
+       url('../fonts/CeraStencilPRO-Medium.woff') format('woff'),
+       url('../fonts/CeraStencilPRO-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
+  /* CeraStencilPRO end */
+
+  .code{
+    color: rgb(3, 3, 134);
+  }
+  .attr{
+    color: rgb(255, 1, 1);
+  }
+  .variable{
+    color: rgb(37, 149, 201);
+  }
+  .comment{
+    color: rgb(0, 83, 0);
+  }
+  .text-link{
+    text-decoration: none;
+    color: #e9967a;
+  }
+
+  .text-link:hover{
+    color: #ff0101;
+  }
+
+  .text-link:active{
+    color: #e9967a;
+  }
+
+  .web-site{
+    width: $container;
+    margin: 0 auto;
+    font-family: "CeraStencilPRO", "Arial", sans-serif;
+    font-weight: 300;
+    font-size: $normalsize;
+  }
+
+  .content-header{
+    margin: 10px 0;
+    text-align: center;
+    font-weight: 500;
+    font-size: $h1size;
+  }
+
+  .content-text{
+    margin: 10px 0;
+  }
+
+  .content-h2{
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: $h2size;
+  }
+
+  .content-h3{
+    font-weight: bold;
+    font-size: $h3size;
+  }
+
+  .section-tasks{
+    padding: 0 0 10px 0;
+    border-bottom: 1px solid rgba(164,175,221,.2);
+    box-sizing: border-box;
+  }
+
+  .content-form-number{
+    width: 150px;
+    padding: 6px;
+    box-sizing: border-box;
+    font-family: "CeraStencilPRO", "Arial", sans-serif;
+    font-weight: 500;
+    font-size: $normalsize;
+    outline: 0;
+    border: 1px dashed black;
+    border-radius: 10px;
+  }
+
+  .content-form-number:focus{
+    background-color: #fffacd;
+  }
+
+  .content-form-button,
+  .content-section-button{
+    padding: 6px;
+    box-sizing: border-box;
+    font-family: "CeraStencilPRO", "Arial", sans-serif;
+    font-weight: 500;
+    font-size: $normalsize;
+    outline: 0;
+    background-color: #fff;
+    border: 1px dashed black;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .content-form-button:hover,
+  .content-section-button:hover{
+    background-color: #fffacd;
+  }
+
+  .content-form-button:active,
+  .content-section-button:active{
+    background-color: #fff;
+  }
+
+  .content-form-div{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .long-button{
+    min-width: 170px;
+  }
+
+  .content-section-result{
+    flex-grow: 1;
+    margin: 0 0 0 20px;
+    padding: 5px 10px;
+    height: 150px;
+    border-radius: 10px;
+    background: #fffacd;
+    overflow-y: auto;
+  }
+
+  .disable-button:hover{
+    background-color: #fff;
+  }
+
+  .content-form-answer{
+    font-family: monospace, "Arial", sans-serif;
+  }
+
+  .form-answer-header{
+    text-align: left;
+  }
+
+  @media(max-width: 999px){
+    .web-site{
+    max-width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  @media(max-width: 765px){
+    .content-form{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .content-form-button{
+      margin: 10px 0 0 0;
+    }
+
+    .content-section-button{
+      margin: 0 auto 10px auto;
+    }
+
+    .content-form-div{
+      flex-wrap: wrap;
+    }
+
+    .content-section-result{
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+}
