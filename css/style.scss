@@ -1,9 +1,11 @@
 // Params
 $container: 1000px;
-$normalsize: 16px;
-$h1size: 24px;
-$h2size: 20px;
-$h3size: 18px;
+$normal-size: 16px;
+$h1-size: 24px;
+$h2-size: 20px;
+$h3-size: 18px;
+$footer-height: 120px;
+$footer-mobile-height: 95px;
 
 /* CeraStencilPRO start */
 @font-face {
@@ -109,14 +111,18 @@ $h3size: 18px;
   margin: 0 auto;
   font-family: "CeraStencilPRO", "Arial", sans-serif;
   font-weight: 300;
-  font-size: $normalsize;
+  font-size: $normal-size;
+}
+
+.site-content{
+  margin-bottom: $footer-height;
 }
 
 .content-header{
   margin: 10px 0;
   text-align: center;
   font-weight: 500;
-  font-size: $h1size;
+  font-size: $h1-size;
 }
 
 .content-text{
@@ -126,12 +132,12 @@ $h3size: 18px;
 .content-h2{
   margin: 10px 0;
   font-weight: bold;
-  font-size: $h2size;
+  font-size: $h2-size;
 }
 
 .content-h3{
   font-weight: bold;
-  font-size: $h3size;
+  font-size: $h3-size;
 }
 
 .section-tasks{
@@ -146,7 +152,7 @@ $h3size: 18px;
   box-sizing: border-box;
   font-family: "CeraStencilPRO", "Arial", sans-serif;
   font-weight: 500;
-  font-size: $normalsize;
+  font-size: $normal-size;
   outline: 0;
   border: 1px dashed black;
   border-radius: 10px;
@@ -162,7 +168,7 @@ $h3size: 18px;
   box-sizing: border-box;
   font-family: "CeraStencilPRO", "Arial", sans-serif;
   font-weight: 500;
-  font-size: $normalsize;
+  font-size: $normal-size;
   outline: 0;
   background-color: #fff;
   border: 1px dashed black;
@@ -214,17 +220,19 @@ $h3size: 18px;
 
 .site-footer{
   position: fixed;
+  display: flex;
+  justify-content: start;
   bottom: 0;
   left: 0;
   background: #fff;
-  min-height: 100px;
+  height: $footer-height;
   width: 100%;
   border-top: 1px solid #a1a1a1;
-  padding: 10px 0;
   box-sizing: border-box;
 }
 
 .footer-menu{
+  width: 100%;
   display: flex;
   max-width: $container;
   padding: 0 10px;
@@ -272,6 +280,11 @@ $h3size: 18px;
 }
 
 @media(max-width: 765px){
+
+  .site-content{
+    margin-bottom: $footer-mobile-height;
+  }
+
   .content-form{
     display: flex;
     flex-direction: column;
@@ -293,6 +306,10 @@ $h3size: 18px;
   .content-section-result{
     width: 100%;
     margin: 0 auto;
+  }
+
+  .site-footer{
+    height: $footer-mobile-height;
   }
 
   .footer-menu-item-svg{
