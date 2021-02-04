@@ -1,5 +1,5 @@
 function insertValueToSelector($selector, $value, $operator = "add more"){
-    let tag = document.querySelector($selector);
+    var tag = document.querySelector($selector);
     if (tag){
         if ($operator == "equal") tag.innerHTML = $value;
         if ($operator == "add more") tag.innerHTML += $value;
@@ -9,9 +9,14 @@ function insertValueToSelector($selector, $value, $operator = "add more"){
     }
 }
 
+function blockingButton ($selector){
+    document.querySelector($selector).disabled = true;
+    document.querySelector($selector).classList.add("disable-button");
+}
+
 function getTemp(){
     // Объявляем переменные
-    let input = document.querySelector('.first-task-input'),
+    var input = document.querySelector('.first-task-input'),
         celsium,
         fahrenheit;
 
@@ -38,11 +43,10 @@ function getTemp(){
 
 function getNameAdmin(){
     //Блокируем кнопку
-    document.querySelector('.second-task-button').disabled = true;
-    document.querySelector('.second-task-button').classList.add("disable-button");
+    blockingButton('.second-task-button');
 
     // Объявляем переменные
-    let admin,
+    var admin,
         name;
     name = "Василий";
     admin = name;
@@ -61,11 +65,10 @@ function getNameAdmin(){
 
 function equalJs(){
     // Блокируем кнопку
-    document.querySelector('.third-task-button').disabled = true;
-    document.querySelector('.third-task-button').classList.add("disable-button");
+    blockingButton('.third-task-button');
 
     // Объявляем переменные
-    let js = 1000 + "108";
+    var js = 1000 + "108";
 
     // Выводим результат
     setTimeout(() => {  insertValueToSelector(".third-task-result", "<span class=\"code\">var</span> <span class=\"variable\">js</span> = 1000 + \"108\"; // <span class=\"comment\">Объявляем переменные</span><br>", "equal"); }, 700);
@@ -75,4 +78,23 @@ function equalJs(){
         document.querySelector('.third-task-button').disabled = false;
         document.querySelector('.third-task-button').classList.remove("disable-button");
     }, 2100);
+}
+
+function lessonTwoTaskTwo(){
+    // Блокируем кнопку
+    blockingButton('.second-task-lesson2-button');
+
+    // Объявляем переменные
+    var a = 2;
+    var x = 1 + (a *= 2);
+
+    // Выводим результат
+    setTimeout(() => {  insertValueToSelector(".second-task-lesson2-result", "<span class=\"code\">var</span> <span class=\"variable\">a</span> = 2; // <span class=\"comment\">Объявляем переменную а</span><br>", "equal"); }, 700);
+    setTimeout(() => {  insertValueToSelector(".second-task-lesson2-result", "<span class=\"code\">var</span> <span class=\"variable\">x</span> = 1 + (<span class=\"variable\">a</span> *= 2); // <span class=\"comment\">Объявляем переменную x</span><br>"); }, 1400);
+    setTimeout(() => {  insertValueToSelector(".second-task-lesson2-result", "<span class=\"code\">alert(</span><span class=\"variable\">x</span><span class=\"code\">)</span>; // <span class=\"comment\">Выводим результат</span><br>"); }, 2100);
+    setTimeout(() => {  
+        alert(x); 
+        document.querySelector('.second-task-lesson2-button').disabled = false;
+        document.querySelector('.second-task-lesson2-button').classList.remove("disable-button");
+    }, 2800);
 }
