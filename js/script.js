@@ -98,3 +98,44 @@ function lessonTwoTaskTwo(){
         document.querySelector('.second-task-lesson2-button').classList.remove("disable-button");
     }, 2800);
 }
+
+function lessonThirdTaskTwo(){
+    // Объявляем переменные
+    var inputA = document.querySelector('.third-task-lesson2-a'),
+        inputB = document.querySelector('.third-task-lesson2-b'),
+        a,
+        b;
+
+    // Проверим, есть ли селектор и если есть, заберём значение
+    if (inputA){
+        if (inputA.value !== "undefined" && inputA.value !== null && inputA.value !== "") a = +inputA.value;
+        else alert("Похоже Вы не ввели число в значение переменной a.");
+    }else{
+        alert("Обратитесь к администратору и скажите что не найден селектор a.");
+        return false;
+    }
+    if (inputB){
+        if (inputB.value !== "undefined" && inputB.value !== null && inputB.value !== "") b = +inputB.value;
+        else alert("Похоже Вы не ввели число в значение переменной b.");
+    }else{
+        alert("Обратитесь к администратору и скажите что не найден селектор a.");
+        return false;
+    }
+
+    console.log (a, b);
+
+    // Проверим, всё ли хорошо с типами. Если да, рассчитаем результат
+    if ((Number.isInteger(a) || a == 0) && (Number.isInteger(b) || b == 0)){
+        // Вывод данных
+        if (a >= 0 ^ b >= 0){
+            alert ("Числа разных знаков. Вывожу сумму: " + (a + b));
+        }else if(a >= 0 && b >= 0){
+            alert ("Числа положительные. Вывожу разность: " + (a - b));
+        }else{
+            alert ("Числа отрицательные. Вывожу произведение: " + (a * b));
+        }
+    }else{
+        alert("oh shit, it's not number...");
+        return false;
+    }
+}

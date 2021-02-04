@@ -146,6 +146,16 @@ $footer-mobile-height: 95px;
   box-sizing: border-box;
 }
 
+.third-task-lesson2-form{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.third-task-lesson2-inputs{
+  margin: 0 20px 0 0;
+}
+
 .content-form-number{
   width: 150px;
   padding: 6px;
