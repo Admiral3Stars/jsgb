@@ -6,13 +6,13 @@
     <link rel="icon" href="https://timur.best/javascript-gb/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Ответы на вопросы курса GeekBrains по JavaScript.</title>
+    <title>Ответы на вопросы курса GeekBrains по JavaScript. Урок 1.</title>
     <script src="js/script.js"></script>
 </head>
 <body class="web-site">
     <header></header>
     <main class="site-content">
-        <h1 class="content-header">Wellcome to my web-site, teacher.</h1>
+        <h1 class="content-header">Lesson one.</h1>
         <section class="first-task section-tasks">
             <p class="content-text">Задача #1. Задать температуру в&nbsp;градусах по&nbsp;Цельсию. Вывести в&nbsp;alert соответствующую температуру в&nbsp;градусах по&nbsp;Фаренгейту. Подсказка: расчёт идёт по&nbsp;формуле: Tf = (9&nbsp;/ 5) * Tc + 32, где Tf&nbsp;&mdash; температура по&nbsp;Фаренгейту, Tc&nbsp;&mdash; температура по&nbsp;Цельсию.</p>
             <form class="first-task-form content-form" action="javascript:void(0)">
@@ -54,6 +54,8 @@
             </article>
         </section>
     </main>
-    <footer></footer>
+    <footer class="site-footer">
+        <? include_once "footer-menu.php"; ?>
+    </footer>
 </body>
 </html>
