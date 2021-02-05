@@ -50,7 +50,7 @@
             если a&nbsp;и&nbsp;b&nbsp;положительные, вывести их&nbsp;разность;<br>
             если а&nbsp;и&nbsp;b&nbsp;отрицательные, вывести их&nbsp;произведение;<br>
             если а&nbsp;и&nbsp;b&nbsp;разных знаков, вывести их&nbsp;сумму; ноль можно считать положительным числом.</p>
-            <form class="third-task-lesson2-form content-form" action="javascript:void(0)">
+            <form class="form-flex content-form" action="javascript:void(0)">
                 <div class="task-lesson2-inputs-group">
                     <p><label>Введите значение переменной a: <input class="third-task-lesson2-a content-form-number" step="1" type="number"></label></p>
                     <p><label>Введите значение переменной b: <input class="third-task-lesson2-b content-form-number" step="1" type="number"></label></p>
@@ -95,6 +95,15 @@
                 <h1 class="form-answer-header content-header">Ответы на&nbsp;вопрос &#8470;&nbsp;7.</h1>
                 <p class="form-answer-text">Если&nbsp;бы это был не&nbsp;яваскрипт, я&nbsp;бы объяснил так: &laquo;при сравнении 0&nbsp;и&nbsp;null мы&nbsp;получим false, так как 0&nbsp;&mdash; это число, а&nbsp;null&nbsp;&mdash; это пустота. Пустота не&nbsp;имеет типа данных, она просто пустота, а&nbsp;0&nbsp;имеет. Также можно сравнить пустой текст &quot;&quot; и&nbsp;null и&nbsp;также получить false, так как у&nbsp;текста уже имеется тип данных string, а&nbsp;null по&nbsp;прежнему остаётся пустотой. Но, поскольку это javascript и&nbsp;операция typeof(null) даёт нам object, то&nbsp;мы&nbsp;не&nbsp;должны употреблять слово &laquo;пустота&raquo; или &laquo;ничто&raquo;. Вероятно, что корректный ответ будет в&nbsp;разности типов данных. null отличен от&nbsp;0&nbsp;по&nbsp;типу данных. Это всё что нам стоит знать.</p>
             </article>
+        </section>
+        <section class="eighth-task-lesson2 section-tasks">
+            <p class="content-text">Задача #8. С&nbsp;помощью рекурсии организовать функцию возведения числа в&nbsp;степень. Формат: function power(val, pow), где val&nbsp;&mdash; заданное число, pow&nbsp;&mdash; степень.</p>
+            <form class="form-flex content-form" action="javascript:void(0)">
+                <div class="task-lesson2-inputs-group">
+                    <p><label>откройте консоль и введите число: <input class="eighth-task-lesson2-a content-form-number" step="0.01" type="number"></label></p>
+                </div>
+                <button class="eighth-task-lesson2-button content-form-button" onclick="lessonTwoTaskEighth();">Выполнить</button>
+            </form>
         </section>
     </main>
     <footer class="site-footer">

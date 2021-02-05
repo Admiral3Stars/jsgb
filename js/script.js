@@ -239,3 +239,28 @@ function lessonTwoTaskFifth(){
     // Решим задачу
     alert ("Результат выражения: " + mathOperation(+a, +b, action));
 }
+
+function lessonTwoTaskEighth(){
+
+    // Объявляем переменные
+    var a = document.querySelector('.eighth-task-lesson2-a').value
+
+    // Приведём и проверим значения
+    if (a !== "undefined" && a !== null && a !== ""){
+        if (isNaN(parseInt(a))){
+            alert("Похоже Вы ввели не число в поле для числа.");
+            return false;
+        }
+    }else{
+        alert("Похоже Вы не ввели число в значение переменной a.");
+        return false;
+    }
+
+    function power(val, pow = 0){
+        console.log("число: " + val, "степень: " + pow, "результат: " + Math.pow(val, pow++));
+        if (pow > 25) return;
+        else power(val, pow);
+    }
+    
+    power(a, 0);
+}
