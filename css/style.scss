@@ -118,6 +118,21 @@ $footer-mobile-height: 95px;
   margin-bottom: $footer-height;
 }
 
+.site-content-no-margin{
+  margin-bottom: 0 !important;
+  transition: 1s;
+}
+
+.site-content-no-margin{
+  margin-bottom: 0 !important;
+  transition: 1s;
+}
+
+.site-content-yes-margin{
+  margin-bottom: $footer-height;
+  transition: 1s;
+}
+
 .content-header{
   margin: 10px 0;
   text-align: center;
@@ -259,7 +274,7 @@ $footer-mobile-height: 95px;
 }
 
 .footer-closed{
-  height: 0;
+  height: 0 !important;
   transition: 1s;
 }
 
@@ -321,7 +336,7 @@ $footer-mobile-height: 95px;
 
 .site-footer-close{
   position: absolute;
-  top: -35px;
+  top: -36px;
   right: 0;
   min-width: 50px;
   min-height: 50px;

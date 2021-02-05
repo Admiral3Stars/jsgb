@@ -82,6 +82,13 @@
                 <button class="fifth-task-lesson2-button content-form-button" onclick="lessonTwoTaskFifth();">Выполнить</button>
             </form>
         </section>
+        <section class="sixth-task-lesson2 section-tasks">
+            <p class="content-text">Задача #6. Реализовать функцию с&nbsp;тремя параметрами: function mathOperation(arg1, arg2, operation), где arg1, arg2&nbsp;&mdash; значения аргументов, operation&nbsp;&mdash; строка с&nbsp;названием операции. В&nbsp;зависимости от&nbsp;переданного значения операции выполнить одну из&nbsp;арифметических операций (использовать функции из&nbsp;пункта&nbsp;3) и&nbsp;вернуть полученное значение (использовать switch).</p>
+            <article class="sixth-task-lesson2-form content-form-answer">
+                <h1 class="form-answer-header content-header">Ответы на&nbsp;вопрос &#8470;&nbsp;6.</h1>
+                <p class="form-answer-text">Решение реализованно в задаче номер 5. Спасибо за понимание.</p>
+            </article>
+        </section>
     </main>
     <footer class="site-footer">
         <? include_once "footer.php"; ?>

@@ -90,6 +90,24 @@
   margin-bottom: 120px;
 }
 
+.site-content-no-margin {
+  margin-bottom: 0 !important;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.site-content-no-margin {
+  margin-bottom: 0 !important;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.site-content-yes-margin {
+  margin-bottom: 120px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
 .content-header {
   margin: 10px 0;
   text-align: center;
@@ -257,7 +275,7 @@
 }
 
 .footer-closed {
-  height: 0;
+  height: 0 !important;
   -webkit-transition: 1s;
   transition: 1s;
 }
@@ -332,7 +350,7 @@
 
 .site-footer-close {
   position: absolute;
-  top: -35px;
+  top: -36px;
   right: 0;
   min-width: 50px;
   min-height: 50px;

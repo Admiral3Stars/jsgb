@@ -4,11 +4,15 @@ window.addEventListener("load", function() {
         if (element.className == "site-footer-close"){
             document.querySelector(".site-footer").classList.remove("footer-closed");
             document.querySelector(".site-footer").classList.add("footer-opened");
+            // document.querySelector(".site-content").classList.remove("site-content-no-margin");
+            // document.querySelector(".site-content").classList.add("site-content-yes-margin");
             element.classList.remove("site-footer-close");
             element.classList.add("site-footer-open");
         }else{
             document.querySelector(".site-footer").classList.remove("footer-opened");
             document.querySelector(".site-footer").classList.add("footer-closed");
+            // document.querySelector(".site-content").classList.remove("site-content-yes-margin");
+            // document.querySelector(".site-content").classList.add("site-content-no-margin");
             element.classList.remove("site-footer-open");
             element.classList.add("site-footer-close");
         }
@@ -31,7 +35,7 @@ function blockingButton ($selector){
     document.querySelector($selector).classList.add("disable-button");
 }
 
-function getMeResulte(a, b, action){
+function mathOperation(a, b, action){
     console.log(a,b,action);
     switch (action){
         case "plus": return a + b;
@@ -233,5 +237,5 @@ function lessonTwoTaskFifth(){
     }
 
     // Решим задачу
-    alert ("Результат выражения: " + getMeResulte(+a, +b, action));
+    alert ("Результат выражения: " + mathOperation(+a, +b, action));
 }
