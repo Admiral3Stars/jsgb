@@ -89,6 +89,13 @@
                 <p class="form-answer-text">Решение реализованно в задаче номер 5. Спасибо за понимание.</p>
             </article>
         </section>
+        <section class="section-tasks">
+            <p class="content-text">Задача #7. Сравнить null и 0. Попробуйте объяснить результат.</p>
+            <article class="content-form-answer">
+                <h1 class="form-answer-header content-header">Ответы на&nbsp;вопрос &#8470;&nbsp;7.</h1>
+                <p class="form-answer-text">Если&nbsp;бы это был не&nbsp;яваскрипт, я&nbsp;бы обяъснил так: &laquo;при сравнении 0&nbsp;и&nbsp;null мы&nbsp;получим false, так как 0&nbsp;&mdash; это число, а&nbsp;null&nbsp;&mdash; это пустота. Пустота не&nbsp;имеет типа данных, она просто пустота, а&nbsp;0&nbsp;имеет. Также можно сравнить пустой текст &raquo;&quot; и&nbsp;null и&nbsp;также получить false, так как у&nbsp;текста уже имеется тип данных string, а&nbsp;null по&nbsp;прежнему остаётся пустотой&laquo;. Но, поскольку это javascript и&nbsp;операция typeof(null) даёт нам object, то&nbsp;мы&nbsp;не&nbsp;должны употреблять слово &laquo;пустота&raquo; или &laquo;ничто&raquo;. Вероятно, что корректный ответ будет в&nbsp;разности типов данных. null отличен от&nbsp;0&nbsp;по&nbsp;типу данных. Это всё что нам стоит знать.</p>
+            </article>
+        </section>
     </main>
     <footer class="site-footer">
         <? include_once "footer.php"; ?>
