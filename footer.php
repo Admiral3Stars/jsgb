@@ -1,3 +1,4 @@
+<button id="footer-closer" class="site-footer-open"></button>
 <nav class="footer-menu">
     <a class="footer-menu-item" href="index.php">
         <? include "footer-menu-svg.php"; ?>

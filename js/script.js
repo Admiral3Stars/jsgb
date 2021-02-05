@@ -1,3 +1,20 @@
+window.addEventListener("load", function() {
+    var element = document.getElementById("footer-closer");
+    element.onclick = function(){
+        if (element.className == "site-footer-close"){
+            document.querySelector(".site-footer").classList.remove("footer-closed");
+            document.querySelector(".site-footer").classList.add("footer-opened");
+            element.classList.remove("site-footer-close");
+            element.classList.add("site-footer-open");
+        }else{
+            document.querySelector(".site-footer").classList.remove("footer-opened");
+            document.querySelector(".site-footer").classList.add("footer-closed");
+            element.classList.remove("site-footer-open");
+            element.classList.add("site-footer-close");
+        }
+    };
+});
+
 function insertValueToSelector($selector, $value, $operator = "add more"){
     var tag = document.querySelector($selector);
     if (tag){

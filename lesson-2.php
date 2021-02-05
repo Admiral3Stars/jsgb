@@ -84,7 +84,7 @@
         </section>
     </main>
     <footer class="site-footer">
-        <? include_once "footer-menu.php"; ?>
+        <? include_once "footer.php"; ?>
     </footer>
 </body>
 </html>

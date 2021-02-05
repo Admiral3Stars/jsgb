@@ -258,6 +258,16 @@ $footer-mobile-height: 95px;
   box-sizing: border-box;
 }
 
+.footer-closed{
+  height: 0;
+  transition: 1s;
+}
+
+.footer-opened{
+  height: $footer-height;
+  transition: 1s;
+}
+
 .footer-menu{
   width: 100%;
   display: flex;
@@ -292,6 +302,36 @@ $footer-mobile-height: 95px;
   .footer-menu-item-svg{
     fill: black;
   }
+}
+
+.site-footer-open{
+  position: absolute;
+  top: -40px;
+  right: 0;
+  min-width: 50px;
+  min-height: 50px;
+  background: transparent;
+  border: none;
+  outline: none;
+  background-image: url(../images/box_arrow_in_down_icon_160379.svg);
+  background-size: cover;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.site-footer-close{
+  position: absolute;
+  top: -35px;
+  right: 0;
+  min-width: 50px;
+  min-height: 50px;
+  background: transparent;
+  border: none;
+  outline: none;
+  background-image: url(../images/box_arrow_in_up_icon_160374.svg);
+  background-size: cover;
+  cursor: pointer;
+  z-index: 10;
 }
 
 @media(max-width: 999px){
