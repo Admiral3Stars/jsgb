@@ -55,7 +55,14 @@
                     <p><label>Введите значение переменной a: <input class="third-task-lesson2-a content-form-number" step="1" type="number"></label></p>
                     <p><label>Введите значение переменной b: <input class="third-task-lesson2-b content-form-number" step="1" type="number"></label></p>
                 </div>
-                <button class="third-task-lesson2-button content-form-button" onclick="lessonThirdTaskTwo();">Результат</button>
+                <button class="third-task-lesson2-button content-form-button" onclick="lessonTwoTaskThird();">Результат</button>
+            </form>
+        </section>
+
+        <section class="fourth-task-lesson2 section-tasks">
+            <p class="content-text">Задача #4. Присвоить переменной а&nbsp;значение в&nbsp;промежутке [0..15]. С&nbsp;помощью оператора switch организовать вывод чисел от&nbsp;a&nbsp;до&nbsp;15.</p>
+            <form class="fourth-task-lesson2-form content-form" action="javascript:void(0)">
+                <button class="fourth-task-lesson2-button content-form-button" onclick="lessonTwoTaskFourth();">Выполнить</button>
             </form>
         </section>
     </main>

@@ -99,7 +99,7 @@ function lessonTwoTaskTwo(){
     }, 2800);
 }
 
-function lessonThirdTaskTwo(){
+function lessonTwoTaskThird(){
     // Объявляем переменные
     var inputA = document.querySelector('.third-task-lesson2-a'),
         inputB = document.querySelector('.third-task-lesson2-b'),
@@ -143,5 +143,32 @@ function lessonThirdTaskTwo(){
         return alert ("Числа положительные. Вывожу разность: " + (a - b));
     }else{
         return alert ("Числа отрицательные. Вывожу произведение: " + (a * b));
+    }
+}
+
+function lessonTwoTaskFourth(){
+    var a = (Math.random() * 15 + 0).toFixed(0),
+        b = "";
+    switch (a){
+        case "0": b += " " + a++;
+        case "1": b += " " + a++;
+        case "2": b += " " + a++;
+        case "3": b += " " + a++;
+        case "4": b += " " + a++;
+        case "5": b += " " + a++;
+        case "6": b += " " + a++;
+        case "7": b += " " + a++;
+        case "8": b += " " + a++;
+        case "9": b += " " + a++;
+        case "10": b += " " + a++;
+        case "11": b += " " + a++;
+        case "12": b += " " + a++;
+        case "13": b += " " + a++;
+        case "14": b += " " + a++;
+        case "15": b += " " + a; 
+        alert(b);
+        break;
+        default:    alert("Что-то пошло не так. Число:" + a);
+        break;
     }
 }
