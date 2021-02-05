@@ -106,36 +106,42 @@ function lessonThirdTaskTwo(){
         a,
         b;
 
-    // Проверим, есть ли селектор и если есть, заберём значение
+    // Проверим, есть ли селектор и значение и приведём к нужному типу
     if (inputA){
-        if (inputA.value !== "undefined" && inputA.value !== null && inputA.value !== "") a = +inputA.value;
-        else alert("Похоже Вы не ввели число в значение переменной a.");
-    }else{
-        alert("Обратитесь к администратору и скажите что не найден селектор a.");
-        return false;
-    }
-    if (inputB){
-        if (inputB.value !== "undefined" && inputB.value !== null && inputB.value !== "") b = +inputB.value;
-        else alert("Похоже Вы не ввели число в значение переменной b.");
-    }else{
-        alert("Обратитесь к администратору и скажите что не найден селектор a.");
-        return false;
-    }
-
-    console.log (a, b);
-
-    // Проверим, всё ли хорошо с типами. Если да, рассчитаем результат
-    if ((Number.isInteger(a) || a == 0) && (Number.isInteger(b) || b == 0)){
-        // Вывод данных
-        if (a >= 0 ^ b >= 0){
-            alert ("Числа разных знаков. Вывожу сумму: " + (a + b));
-        }else if(a >= 0 && b >= 0){
-            alert ("Числа положительные. Вывожу разность: " + (a - b));
+        if (inputA.value !== "undefined" && inputA.value !== null && inputA.value !== ""){
+            a = parseInt(inputA.value);
+            if (isNaN(a)){
+                alert("Похоже Вы ввели не число в input для a.");
+                return false;
+            }
         }else{
-            alert ("Числа отрицательные. Вывожу произведение: " + (a * b));
+            alert("Похоже Вы не ввели число в значение переменной a.");
+            return false;
         }
     }else{
-        alert("oh shit, it's not number...");
-        return false;
+        return alert("Обратитесь к администратору и скажите что не найден селектор a.");
+    }
+    if (inputB){
+        if (inputB.value !== "undefined" && inputB.value !== null && inputB.value !== ""){
+            b = parseInt(inputB.value);
+            if (isNaN(b)){
+                alert("Похоже Вы ввели не число в input для b.");
+                return false;
+            }
+        }else{
+            alert("Похоже Вы не ввели число в значение переменной b.");
+            return false;
+        }
+    }else{
+        return alert("Обратитесь к администратору и скажите что не найден селектор b.");
+    }
+
+    // Решим задачу
+    if (a >= 0 ^ b >= 0){
+        return  alert ("Числа разных знаков. Вывожу сумму: " + (a + b));
+    }else if(a >= 0 && b >= 0){
+        return alert ("Числа положительные. Вывожу разность: " + (a - b));
+    }else{
+        return alert ("Числа отрицательные. Вывожу произведение: " + (a * b));
     }
 }
