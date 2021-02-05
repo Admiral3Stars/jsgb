@@ -139,7 +139,7 @@
           justify-content: center;
 }
 
-.third-task-lesson2-inputs {
+.task-lesson2-inputs-group {
   margin: 0 20px 0 0;
 }
 
@@ -151,13 +151,26 @@
   font-family: "CeraStencilPRO", "Arial", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  outline: 0;
+  outline: none;
   border: 1px dashed black;
   border-radius: 10px;
 }
 
 .content-form-number:focus {
   background-color: #fffacd;
+}
+
+.content-form-select {
+  min-width: 100px;
+  padding: 3px 6px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "CeraStencilPRO", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  outline: none;
+  border: 1px dashed black;
+  border-radius: 10px;
 }
 
 .content-form-button,

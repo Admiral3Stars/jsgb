@@ -14,6 +14,22 @@ function blockingButton ($selector){
     document.querySelector($selector).classList.add("disable-button");
 }
 
+function getMeResulte(a, b, action){
+    console.log(a,b,action);
+    switch (action){
+        case "plus": return a + b;
+        break;
+        case "minus": return a - b;
+        break;
+        case "multiply": return a * b;
+        break;
+        case "share": return a / b;
+        break;
+        default: return "Что-то пошло не так.";
+        break;
+    }
+}
+
 function getTemp(){
     // Объявляем переменные
     var input = document.querySelector('.first-task-input'),
@@ -171,4 +187,34 @@ function lessonTwoTaskFourth(){
         default:    alert("Что-то пошло не так. Число:" + a);
         break;
     }
+}
+
+function lessonTwoTaskFifth(){
+    // Объявляем переменные
+    var a = document.querySelector('.fifth-task-lesson2-a').value,
+        b = document.querySelector('.fifth-task-lesson2-b').value,
+        action = document.querySelector('.fifth-task-lesson2-select').value;
+
+    // Приведём и проверим значения
+    if (a !== "undefined" && a !== null && a !== ""){
+        if (isNaN(+a)){
+            alert("Похоже Вы ввели не число в input для a.");
+            return false;
+        }
+    }else{
+        alert("Похоже Вы не ввели число в значение переменной a.");
+        return false;
+    }
+    if (b !== "undefined" && b !== null && b !== ""){
+        if (isNaN(+b)){
+            alert("Похоже Вы ввели не число в input для b.");
+            return false;
+        }
+    }else{
+        alert("Похоже Вы не ввели число в значение переменной b.");
+        return false;
+    }
+
+    // Решим задачу
+    alert ("Результат выражения: " + getMeResulte(+a, +b, action));
 }

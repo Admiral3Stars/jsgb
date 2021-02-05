@@ -157,7 +157,7 @@ $footer-mobile-height: 95px;
   justify-content: center;
 }
 
-.third-task-lesson2-inputs{
+.task-lesson2-inputs-group{
   margin: 0 20px 0 0;
 }
 
@@ -168,13 +168,25 @@ $footer-mobile-height: 95px;
   font-family: "CeraStencilPRO", "Arial", sans-serif;
   font-weight: 500;
   font-size: $normal-size;
-  outline: 0;
+  outline: none;
   border: 1px dashed black;
   border-radius: 10px;
 }
 
 .content-form-number:focus{
   background-color: #fffacd;
+}
+
+.content-form-select{
+  min-width: 100px;
+  padding: 3px 6px;
+  box-sizing: border-box;
+  font-family: "CeraStencilPRO", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: $normal-size;
+  outline: none;
+  border: 1px dashed black;
+  border-radius: 10px;
 }
 
 .content-form-button,

@@ -51,7 +51,7 @@
             если а&nbsp;и&nbsp;b&nbsp;отрицательные, вывести их&nbsp;произведение;<br>
             если а&nbsp;и&nbsp;b&nbsp;разных знаков, вывести их&nbsp;сумму; ноль можно считать положительным числом.</p>
             <form class="third-task-lesson2-form content-form" action="javascript:void(0)">
-                <div class="third-task-lesson2-inputs">
+                <div class="task-lesson2-inputs-group">
                     <p><label>Введите значение переменной a: <input class="third-task-lesson2-a content-form-number" step="1" type="number"></label></p>
                     <p><label>Введите значение переменной b: <input class="third-task-lesson2-b content-form-number" step="1" type="number"></label></p>
                 </div>
@@ -63,6 +63,23 @@
             <p class="content-text">Задача #4. Присвоить переменной а&nbsp;значение в&nbsp;промежутке [0..15]. С&nbsp;помощью оператора switch организовать вывод чисел от&nbsp;a&nbsp;до&nbsp;15.</p>
             <form class="fourth-task-lesson2-form content-form" action="javascript:void(0)">
                 <button class="fourth-task-lesson2-button content-form-button" onclick="lessonTwoTaskFourth();">Выполнить</button>
+            </form>
+        </section>
+
+        <section class="fifth-task-lesson2 section-tasks">
+            <p class="content-text">Задача #5. Реализовать основные 4&nbsp;арифметические операции в&nbsp;виде функций с&nbsp;двумя параметрами. Обязательно использовать оператор return.</p>
+            <form class="fifth-task-lesson2-form content-form" action="javascript:void(0)">
+                <div class="task-lesson2-inputs-group">
+                    <p><label>Введите значение переменной a: <input class="fifth-task-lesson2-a content-form-number" step="0.01" type="number"></label></p>
+                    <p>Выберите действие: <select name="action" class="fifth-task-lesson2-select content-form-select">
+                        <option value="plus" class="content-form-select-item" selected>+</option>
+                        <option value="minus" class="content-form-select-item">-</option>
+                        <option value="multiply" class="content-form-select-item">*</option>
+                        <option value="share" class="content-form-select-item">/</option>
+                    </select></p>
+                    <p><label>Введите значение переменной b: <input class="fifth-task-lesson2-b content-form-number" step="0.01" type="number"></label></p>
+                </div>
+                <button class="fifth-task-lesson2-button content-form-button" onclick="lessonTwoTaskFifth();">Выполнить</button>
             </form>
         </section>
     </main>
