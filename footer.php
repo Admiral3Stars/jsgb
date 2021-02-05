@@ -8,4 +8,8 @@
         <? include "footer-menu-svg.php"; ?>
         <span class="footer-menu-item-text">Урок 2</span>
     </a>
+	<a class="footer-menu-item" href="lesson-3.php">
+        <? include "footer-menu-svg.php"; ?>
+        <span class="footer-menu-item-text">Урок 3</span>
+    </a>
 </nav>
