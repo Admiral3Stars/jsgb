@@ -144,6 +144,10 @@ $footer-mobile-height: 95px;
   margin: 10px 0;
 }
 
+.content-list-item{
+  list-style: lower-latin;
+}
+
 .content-h2{
   margin: 10px 0;
   font-weight: bold;
@@ -153,6 +157,33 @@ $footer-mobile-height: 95px;
 .content-h3{
   font-weight: bold;
   font-size: $h3-size;
+}
+
+.content-item{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.item-box{
+  margin: 10px 10px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-button{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.item-box-quantity-text{
+  margin: 10px 0 0 0;
+}
+
+.item-box-quantity{
+  margin: 0 0 10px 0;
 }
 
 .section-tasks{
@@ -206,6 +237,7 @@ $footer-mobile-height: 95px;
 
 .content-form-button,
 .content-section-button{
+  margin: 0 10px;
   padding: 6px;
   box-sizing: border-box;
   font-family: "CeraStencilPRO", "Arial", sans-serif;

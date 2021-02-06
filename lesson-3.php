@@ -20,6 +20,38 @@
                 <button class="content-form-button" onclick="lessonTreeTaskFirst();">Выполнить</button></p>
             </form>
         </section>
+        <section class="section-tasks">
+            <p class="content-text">Задача #2 и 3. С&nbsp;этого урока начинаем работать с&nbsp;функционалом интернет-магазина. Предположим, есть сущность корзины. Нужно реализовать функционал подсчета стоимости корзины в&nbsp;зависимости от&nbsp;находящихся в&nbsp;ней товаров.</p>
+            <p class="content-text">Товары в&nbsp;корзине хранятся в&nbsp;массиве. Задачи:</p>
+            <ol class="content-list">
+                <li class="content-list-item">Организовать такой массив для хранения товаров в&nbsp;корзине;</li>
+                <li class="content-list-item">Организовать функцию countBasketPrice, которая будет считать стоимость корзины.</li>
+            </ol>
+            <div class="content-item">
+                <div class="item-box">
+                    <img src="images/televizor.jpg" alt="Телевизор" class="item-box-image" width="150px" height="150px">
+                    <span class="item-box-text">Телевизор</span>
+                    <span class="item-box-price" data-price="17999">17999.00 руб.</span>
+                    <span class="item-box-quantity-text">введите кол-во:</span>
+                    <input type="number" class="item-box-quantity content-form-number" step="0.01">
+                </div>
+                <div class="item-box">
+                    <img src="images/smatphone.jpg" alt="Смартфон" class="item-box-image" width="150px" height="150px">
+                    <span class="item-box-text">Смартфон</span>
+                    <span class="item-box-price" data-price="8641.00">8641.00 руб.</span>
+                    <span class="item-box-quantity-text">введите кол-во:</span>
+                    <input type="number" class="item-box-quantity content-form-number" step="0.01">
+                </div>
+                <div class="item-box">
+                    <img src="images/beer.jpg" alt="Пиво" class="item-box-image" width="150px" height="150px">
+                    <span class="item-box-text">Пиво</span>
+                    <span class="item-box-price" data-price="45.07">45.07 руб.</span>
+                    <span class="item-box-quantity-text">введите кол-во:</span>
+                    <input type="number" class="item-box-quantity content-form-number" step="0.01">
+                </div>
+                <span class="item-button"><button class="content-form-button long-button" onclick="lessonTreeTaskSecond();">Купить</button></span>
+            </div>
+        </section>
     </main>
     <footer class="site-footer">
         <? include_once "footer.php"; ?>

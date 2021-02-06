@@ -277,3 +277,25 @@ function lessonTreeTaskFirst(){
         i++;
     }
 }
+
+function lessonTreeTaskSecond(){
+    var items = [],
+        sum = 0,
+        total = 0;
+    element = document.querySelectorAll(".item-box");
+    for (var item of element){
+        items.push({
+            "name":     item.querySelector('.item-box-text').innerHTML,
+            "price":    +item.querySelector('.item-box-price').getAttribute('data-price'),
+            "quantity": parseInt(item.querySelector('.item-box-quantity').value)
+        });
+    }
+    for (var item of items){
+        if (item.quantity > 0){
+            sum = item.price * item.quantity;
+            total += sum;
+            alert(item.name + ": " + item.quantity + " шт." + " на сумму " + sum + " руб. (" + item.price + " руб. за штуку).");
+        }
+    }
+    alert("Общая сумма заказа: " + total + " руб.");
+}
