@@ -301,7 +301,7 @@ function lessonTreeTaskSecond(){
     alert("Общая сумма заказа: " + total + " руб.");
 }
 
-function lessonTreeTaskFifth(method = "alert"){
+function lessonTreeTaskFourth(method = "alert"){
     switch (method){
         case "alert": for (var i = 0; i < 10; alert(i++)){};
         break;
@@ -309,5 +309,12 @@ function lessonTreeTaskFifth(method = "alert"){
         break;
         default: alert("Что-то пошло не так");
         break;
+    }
+}
+
+function lessonTreeTaskFifth(){
+    var x = "";
+    for (var i = 0; i < 20; i++){
+        console.log(x += "x");
     }
 }

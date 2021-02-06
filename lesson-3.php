@@ -59,9 +59,22 @@
                     01 <span class="code">for</span>(…){<span class="comment">// здесь пусто</span>}
                 </code>
                 <div class="button-group">
-                    <button class="content-form-button long-button" onclick="lessonTreeTaskFifth('alert');">Выполнить через Alert</button>
-                    <button class="content-form-button long-button" onclick="lessonTreeTaskFifth('console');">Выполнить через Console</button>
+                    <button class="content-form-button long-button" onclick="lessonTreeTaskFourth('alert');">Выполнить через Alert</button>
+                    <button class="content-form-button long-button" onclick="lessonTreeTaskFourth('console');">Выполнить через Console</button>
                 </div>
+            </div>
+        </section>
+        <section class="section-tasks">
+            <p class="content-text">Задача #5. Нарисовать пирамиду с&nbsp;помощью console.log, как показано на&nbsp;рисунке, только у&nbsp;вашей пирамиды должно быть 20&nbsp;рядов, а&nbsp;не&nbsp;5:</p>
+            <div class="content-form-div">
+                <code class="content-section-result">
+                    01 x<br>
+                    02 xx<br>
+                    03 xxx<br>
+                    04 xxxx<br>
+                    05 xxxxx<br>
+                </code>
+                <button class="content-form-button long-button" onclick="lessonTreeTaskFifth();">Выполнить</button>
             </div>
         </section>
     </main>
