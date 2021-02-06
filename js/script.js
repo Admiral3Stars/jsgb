@@ -264,3 +264,16 @@ function lessonTwoTaskEighth(){
     
     power(a, 0);
 }
+
+function lessonTreeTaskFirst(){
+    var i = 0, n, c; // назначим 3 переменные. i - число от 0 до 100; n - число, на которое будем делить; с - кол-во true при деление без остатка.
+    while (i <= 100){
+        n = 1; c = 0;
+        do{
+            if (i % n == 0) c++;
+            n++;
+        }while (n <= i);
+        if (c == 2) console.log("Найдено простое число: " + i);
+        i++;
+    }
+}

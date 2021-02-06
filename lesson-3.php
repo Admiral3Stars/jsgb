@@ -13,7 +13,13 @@
     <header></header>
     <main class="site-content">
         <h1 class="content-header">Lesson three.</h1>
-       
+        <section class="section-tasks">
+            <p class="content-text">Задача #1. С&nbsp;помощью цикла while вывести все простые числа в&nbsp;промежутке от&nbsp;0&nbsp;до&nbsp;100</p>
+            <form class="content-form" action="javascript:void(0)">
+                <p>откройте консоль и нажмите на кнопку:
+                <button class="content-form-button" onclick="lessonTreeTaskFirst();">Выполнить</button></p>
+            </form>
+        </section>
     </main>
     <footer class="site-footer">
         <? include_once "footer.php"; ?>
