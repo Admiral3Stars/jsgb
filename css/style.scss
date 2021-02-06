@@ -106,6 +106,12 @@ $footer-mobile-height: 95px;
   color: #e9967a;
 }
 
+.button-group{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .web-site{
   width: $container;
   margin: 0 auto;
@@ -198,13 +204,15 @@ $footer-mobile-height: 95px;
   align-items: center;
 }
 
+.fifth-task-lesson2-form{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 .fourth-task-lesson2-form{
   display: flex;
   justify-content: center;
-}
-
-.task-inputs-group{
-  margin: 0 20px 0 0;
 }
 
 .content-form-number{
@@ -237,7 +245,7 @@ $footer-mobile-height: 95px;
 
 .content-form-button,
 .content-section-button{
-  margin: 0 10px;
+  margin: 5px 10px;
   padding: 6px;
   box-sizing: border-box;
   font-family: "CeraStencilPRO", "Arial", sans-serif;

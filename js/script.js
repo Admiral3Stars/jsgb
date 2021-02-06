@@ -300,3 +300,14 @@ function lessonTreeTaskSecond(){
     }
     alert("Общая сумма заказа: " + total + " руб.");
 }
+
+function lessonTreeTaskFifth(method = "alert"){
+    switch (method){
+        case "alert": for (var i = 0; i < 10; alert(i++)){};
+        break;
+        case "console": for (var i = 0; i < 10; console.log(i++)){}
+        break;
+        default: alert("Что-то пошло не так");
+        break;
+    }
+}

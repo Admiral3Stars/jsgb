@@ -52,6 +52,18 @@
                 <span class="item-button"><button class="content-form-button long-button" onclick="lessonTreeTaskSecond();">Купить</button></span>
             </div>
         </section>
+        <section class="section-tasks">
+            <p class="content-text">Задача #4. Вывести с&nbsp;помощью цикла for числа от&nbsp;0&nbsp;до&nbsp;9, не&nbsp;используя тело цикла. Выглядеть это должно так:</p>
+            <div class="content-form-div">
+                <code class="content-section-result">
+                    01 <span class="code">for</span>(…){<span class="comment">// здесь пусто</span>}
+                </code>
+                <div class="button-group">
+                    <button class="content-form-button long-button" onclick="lessonTreeTaskFifth('alert');">Выполнить через Alert</button>
+                    <button class="content-form-button long-button" onclick="lessonTreeTaskFifth('console');">Выполнить через Console</button>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="site-footer">
         <? include_once "footer.php"; ?>

@@ -51,7 +51,7 @@
             если а&nbsp;и&nbsp;b&nbsp;отрицательные, вывести их&nbsp;произведение;<br>
             если а&nbsp;и&nbsp;b&nbsp;разных знаков, вывести их&nbsp;сумму; ноль можно считать положительным числом.</p>
             <form class="form-flex content-form" action="javascript:void(0)">
-                <div class="task-lesson2-inputs-group">
+                <div class="task-inputs-group">
                     <p><label>Введите значение переменной a: <input class="third-task-lesson2-a content-form-number" step="1" type="number"></label></p>
                     <p><label>Введите значение переменной b: <input class="third-task-lesson2-b content-form-number" step="1" type="number"></label></p>
                 </div>
@@ -69,7 +69,7 @@
         <section class="fifth-task-lesson2 section-tasks">
             <p class="content-text">Задача #5. Реализовать основные 4&nbsp;арифметические операции в&nbsp;виде функций с&nbsp;двумя параметрами. Обязательно использовать оператор return.</p>
             <form class="fifth-task-lesson2-form content-form" action="javascript:void(0)">
-                <div class="task-lesson2-inputs-group">
+                <div class="task-inputs-group">
                     <p><label>Введите значение переменной a: <input class="fifth-task-lesson2-a content-form-number" step="0.01" type="number"></label></p>
                     <p>Выберите действие: <select name="action" class="fifth-task-lesson2-select content-form-select">
                         <option value="plus" class="content-form-select-item" selected>+</option>
@@ -99,7 +99,7 @@
         <section class="eighth-task-lesson2 section-tasks">
             <p class="content-text">Задача #8. С&nbsp;помощью рекурсии организовать функцию возведения числа в&nbsp;степень. Формат: function power(val, pow), где val&nbsp;&mdash; заданное число, pow&nbsp;&mdash; степень.</p>
             <form class="form-flex content-form" action="javascript:void(0)">
-                <div class="task-lesson2-inputs-group">
+                <div class="task-inputs-group">
                     <p><label>откройте консоль и введите число: <input class="eighth-task-lesson2-a content-form-number" step="0.01" type="number"></label></p>
                 </div>
                 <button class="eighth-task-lesson2-button content-form-button" onclick="lessonTwoTaskEighth();">Выполнить</button>
