@@ -33,21 +33,21 @@
                     <span class="item-box-text">Телевизор</span>
                     <span class="item-box-price" data-price="17999">17999.00 руб.</span>
                     <span class="item-box-quantity-text">введите кол-во:</span>
-                    <input type="number" class="item-box-quantity content-form-number" step="0.01">
+                    <input type="number" class="item-box-quantity content-form-number" step="1">
                 </div>
                 <div class="item-box">
                     <img src="images/smatphone.jpg" alt="Смартфон" class="item-box-image" width="150px" height="150px">
                     <span class="item-box-text">Смартфон</span>
                     <span class="item-box-price" data-price="8641.00">8641.00 руб.</span>
                     <span class="item-box-quantity-text">введите кол-во:</span>
-                    <input type="number" class="item-box-quantity content-form-number" step="0.01">
+                    <input type="number" class="item-box-quantity content-form-number" step="1">
                 </div>
                 <div class="item-box">
                     <img src="images/beer.jpg" alt="Пиво" class="item-box-image" width="150px" height="150px">
                     <span class="item-box-text">Пиво</span>
                     <span class="item-box-price" data-price="45.07">45.07 руб.</span>
                     <span class="item-box-quantity-text">введите кол-во:</span>
-                    <input type="number" class="item-box-quantity content-form-number" step="0.01">
+                    <input type="number" class="item-box-quantity content-form-number" step="1">
                 </div>
                 <span class="item-button"><button class="content-form-button long-button" onclick="lessonTreeTaskSecond();">Купить</button></span>
             </div>
