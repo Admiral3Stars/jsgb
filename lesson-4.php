@@ -25,7 +25,11 @@
         <section class="section-tasks">
             <p class="content-text">Задача #2. Для игры, реализованной на&nbsp;уроке, добавить возможность вывода хода номер&nbsp;n (номер задается пользователем).</p>
             <a class="second-task-lesson4-link" href="game-four-lesson/">Перейти к игре</a>        
-            </section>
+        </section>
+        <section class="section-tasks">
+            <p class="content-text">Задача #3. На&nbsp;базе игры, созданной на&nbsp;уроке, реализовать игру &laquo;Кто хочет стать миллионером?&raquo;</p>
+            <a class="second-task-lesson4-link" href="millioner/">Перейти к игре</a>        
+        </section>
     </main>
     <footer class="site-footer">
         <? include_once "footer.php"; ?>
