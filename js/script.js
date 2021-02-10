@@ -318,3 +318,34 @@ function lessonTreeTaskFifth(){
         console.log(x += "x");
     }
 }
+
+function crushing(){
+    console.log(this);
+    if (!this.number){
+        console.log(this.error = "Не задано свойство с числом");
+    }else if (this.number < this.min){
+        console.log(this.error = "Число меньше " + this.min);
+    }else if (this.number > this.max){
+        console.log(this.error = "Число больше " + this.max);
+    }else{
+        this.number += ""; // Преобразуем в строку, join() со свойством не работает, может я чего-то не так делаю.
+        var i = -1;
+        for (var n of this.number){
+            i++;
+        }
+        this.unit = this.number[i];
+        this.dozen = (this.number[i-1] === undefined) ? 0 : this.number[i-1];
+        this.hundred = (this.number[i-2] === undefined) ? 0 : this.number[i-2];
+        console.log("сотни: " + this.hundred + " десятки: " + this.dozen + " единицы: " + this.unit);
+    }
+}
+
+function lessonFourTaskFirst(){
+    var object = {
+        min : 0,
+        max : 999,
+        number : parseInt(document.querySelector('.first-task-lesson4-a').value),
+    };
+    object.crush = crushing;
+    object.crush();
+}

@@ -300,6 +300,34 @@ $footer-mobile-height: 95px;
   text-align: left;
 }
 
+.second-task-lesson4-link{
+  display: block;
+  text-decoration: none;
+  max-width: 150px;
+  text-align: center;
+  text-transform: uppercase;
+  color: black;
+  margin: 5px auto;
+  padding: 6px;
+  box-sizing: border-box;
+  font-family: "CeraStencilPRO", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: $normal-size;
+  outline: 0;
+  background-color: #fff;
+  border: 1px dashed black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.second-task-lesson4-link:hover{
+  background-color: #fffacd;
+}
+
+.second-task-lesson4-link:active{
+  background-color: #fff;
+}
+
 .site-footer{
   position: fixed;
   display: flex;
@@ -330,7 +358,7 @@ $footer-mobile-height: 95px;
   padding: 0 10px;
   box-sizing: border-box;
   margin: 0 auto;
-  flex-wrap: wrap;
+  overflow-x: scroll;
 }
 
 .footer-menu-item{
