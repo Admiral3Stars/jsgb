@@ -7,6 +7,12 @@ $h3-size: 18px;
 $footer-height: 120px;
 $footer-mobile-height: 95px;
 $chess-size: 550px;
+$chess-font: 25px;
+$chess-font-figure: 40px;
+$chess-small: 2; // Во сколько раз уменьшим шахматную достуку на мобиле
+$chess-size-mobile: $chess-size / $chess-small;
+$chess-font-mobile: $chess-font / $chess-small;
+$chess-font-figure-mobile: $chess-font-figure / $chess-small;
 
 /* CeraStencilPRO start */
 @font-face {
@@ -331,13 +337,13 @@ $chess-size: 550px;
   height: $chess-size/10;
   box-sizing: border-box;
   border: 1px solid black;
-  font-size: 25px;
+  font-size: $chess-font;
   text-transform: uppercase;
   background-color: transparent;
 }
 
 .figure-size{
-  font-size: 40px;
+  font-size: $chess-font-figure;
   cursor: pointer;
 }
 
@@ -527,6 +533,26 @@ $chess-size: 550px;
   .content-section-result{
     width: 100%;
     margin: 0 auto;
+  }
+
+  .chess{
+    width: $chess-size-mobile;
+    height: $chess-size-mobile;
+  }
+  
+  .chess-top-line,
+  .chess-bottom-line{
+    margin: 0 $chess-size-mobile / 10;
+  }
+
+  .chess-block{
+    width: $chess-size-mobile/10;
+    height: $chess-size-mobile/10;
+    font-size: $chess-font-mobile;
+  }
+
+  .figure-size{
+    font-size: $chess-font-figure-mobile;
   }
 
   .site-footer{

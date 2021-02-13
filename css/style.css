@@ -592,6 +592,22 @@
     width: 100%;
     margin: 0 auto;
   }
+  .chess {
+    width: 275px;
+    height: 275px;
+  }
+  .chess-top-line,
+  .chess-bottom-line {
+    margin: 0 27.5px;
+  }
+  .chess-block {
+    width: 27.5px;
+    height: 27.5px;
+    font-size: 12.5px;
+  }
+  .figure-size {
+    font-size: 20px;
+  }
   .site-footer {
     height: 95px;
   }
