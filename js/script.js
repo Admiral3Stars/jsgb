@@ -512,6 +512,8 @@ function chessBoard(){
             this.leftLine.classList.add("chess-left-line");
             this.board.classList.add("chess-board");
 
+            this.element.innerHTML = ""; // очистим доску
+
             this.element.append(this.topLine, this.centerLine, this.bottomLine);
 
             var centerLine = document.querySelector(".chess-center-line");
