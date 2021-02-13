@@ -16,4 +16,8 @@
         <? include "footer-menu-svg.php"; ?>
         <span class="footer-menu-item-text">Урок 4</span>
     </a>
+    <a class="footer-menu-item" href="lesson-5.php">
+        <? include "footer-menu-svg.php"; ?>
+        <span class="footer-menu-item-text">Урок 5</span>
+    </a>
 </nav>

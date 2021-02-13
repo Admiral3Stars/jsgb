@@ -6,6 +6,7 @@ $h2-size: 20px;
 $h3-size: 18px;
 $footer-height: 120px;
 $footer-mobile-height: 95px;
+$chess-size: 550px;
 
 /* CeraStencilPRO start */
 @font-face {
@@ -210,7 +211,8 @@ $footer-mobile-height: 95px;
   align-items: center;
 }
 
-.fourth-task-lesson2-form{
+.fourth-task-lesson2-form,
+.form-center-button{
   display: flex;
   justify-content: center;
 }
@@ -272,6 +274,75 @@ $footer-mobile-height: 95px;
   display: flex;
   justify-content: start;
   align-items: center;
+}
+
+.chess{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px auto;
+  border: 2px solid black;
+  width: $chess-size;
+  height: $chess-size;
+  background-color: #e9967a;
+}
+
+.chess-top-line,
+.chess-bottom-line{
+  display: flex;
+  margin: 0 $chess-size/10;
+  width: 100%;
+}
+
+.chess-center-line{
+  display: flex;
+}
+
+.chess-left-line,
+.chess-rigth-line{
+  display: flex;
+  flex-direction: column;
+}
+
+.chess-top-line,
+.chess-bottom-line,
+.chess-left-line,
+.chess-rigth-line{
+  .chess-block{
+    border: none;
+  }
+}
+
+.chess-bottom-line,
+.chess-rigth-line{
+  transform: rotate(180deg);
+}
+
+.chess-board{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #a1a1a1;
+}
+
+.chess-block{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $chess-size/10;
+  height: $chess-size/10;
+  box-sizing: border-box;
+  border: 1px solid black;
+  font-size: 25px;
+  text-transform: uppercase;
+  background-color: transparent;
+}
+
+.figure-size{
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.white-block{
+  background-color: #fff;
 }
 
 .long-button{

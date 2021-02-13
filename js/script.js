@@ -349,3 +349,235 @@ function lessonFourTaskFirst(){
     object.crush = crushing;
     object.crush();
 }
+
+function chessBoard(){
+
+    var game = {
+        element: document.querySelector(".chess"),
+        topLine: document.createElement("div"),
+        centerLine: document.createElement("div"),
+        rightLine: document.createElement("div"),
+        bottomLine: document.createElement("div"),
+        leftLine: document.createElement("div"),
+        board: document.createElement("div"),
+        stringNameLines: ["a","b","c","d","e","f","g","h"],
+        numberNameLines: ["1","2","3","4","5","6","7","8"],
+        figures:{
+            0: {
+                0: {
+                    figureName: "Ладья",
+                    code: "&#9814;"
+                },
+                1: {
+                    figureName: "Конь",
+                    code: "&#9816;"
+                },
+                2: {
+                    figureName: "Слон",
+                    code: "&#9815;"
+                },
+                3: {
+                    figureName: "Ферзь",
+                    code: "&#9813;"
+                },
+                4: {
+                    figureName: "Король",
+                    code: "&#9812;"
+                },
+                5: {
+                    figureName: "Слон",
+                    code: "&#9815;"
+                },
+                6: {
+                    figureName: "Конь",
+                    code: "&#9816;"
+                },
+                7: {
+                    figureName: "Ладья",
+                    code: "&#9814;"
+                }
+            },
+
+            1: {
+                0: {
+                    figureName: "Пешка",
+                    code: "&#9817;"
+                },
+                1: {
+                    figureName: "Пешка",
+                    code: "&#9817;"
+                },
+                2: {
+                    figureName: "Пешка",
+                    code: "&#9817;"
+                },
+                3: {
+                    figureName: "Пешка",
+                    code: "&#9817;"
+                },
+                4: {
+                    figureName: "Пешка",
+                    code: "&#9817;"
+                },
+                5: {
+                    figureName: "Пешка",
+                    code: "&#9817;"
+                },
+                6: {
+                    figureName: "Пешка",
+                    code: "&#9817;"
+                },
+                7: {
+                    figureName: "Пешка",
+                    code: "&#9817;"
+                }
+            },
+
+            6: {
+                0: {
+                    figureName: "Пешка",
+                    code: "&#9823;"
+                },
+                1: {
+                    figureName: "Пешка",
+                    code: "&#9823;"
+                },
+                2: {
+                    figureName: "Пешка",
+                    code: "&#9823;"
+                },
+                3: {
+                    figureName: "Пешка",
+                    code: "&#9823;"
+                },
+                4: {
+                    figureName: "Пешка",
+                    code: "&#9823;"
+                },
+                5: {
+                    figureName: "Пешка",
+                    code: "&#9823;"
+                },
+                6: {
+                    figureName: "Пешка",
+                    code: "&#9823;"
+                },
+                7: {
+                    figureName: "Пешка",
+                    code: "&#9823;"
+                }
+            },
+            
+            7: {
+                0: {
+                    figureName: "Ладья",
+                    code: "&#9820;"
+                },
+                1: {
+                    figureName: "Конь",
+                    code: "&#9822;"
+                },
+                2: {
+                    figureName: "Слон",
+                    code: "&#9821;"
+                },
+                3: {
+                    figureName: "Ферзь",
+                    code: "&#9819;"
+                },
+                4: {
+                    figureName: "Король",
+                    code: "&#9818;"
+                },
+                5: {
+                    figureName: "Слон",
+                    code: "&#9821;"
+                },
+                6: {
+                    figureName: "Конь",
+                    code: "&#9822;"
+                },
+                7: {
+                    figureName: "Ладья",
+                    code: "&#9820;"
+                }
+            }
+        },
+
+        addChess: function(){
+            this.topLine.classList.add("chess-top-line");
+            this.centerLine.classList.add("chess-center-line");
+            this.rightLine.classList.add("chess-rigth-line");
+            this.bottomLine.classList.add("chess-bottom-line");
+            this.leftLine.classList.add("chess-left-line");
+            this.board.classList.add("chess-board");
+
+            this.element.append(this.topLine, this.centerLine, this.bottomLine);
+
+            var centerLine = document.querySelector(".chess-center-line");
+            centerLine.append(this.leftLine, this.board, this.rightLine);
+
+            /* Почему-то append работает только для последнего элемента, пришлось поэтому делать несколько циклов, хотя можно было бы всё сделать в 1, если бы работало:
+            topLine.append(block);
+            bottomLine.append(block);
+            */
+            var topLine = document.querySelector(".chess-top-line");
+            for (var i = 0; i < this.stringNameLines.length; i++){
+                var block = document.createElement("div");
+                block.classList.add("chess-block");
+                block.innerText = this.stringNameLines[i];
+                topLine.append(block);
+            }
+
+            var bottomLine = document.querySelector(".chess-bottom-line");
+            for (var i = 0; i < this.stringNameLines.length; i++){
+                var block = document.createElement("div");
+                block.classList.add("chess-block");
+                block.innerText = this.stringNameLines[i];
+                bottomLine.append(block);
+            }
+
+            var leftLine = document.querySelector(".chess-left-line");
+            for (var i = 0; i < this.numberNameLines.length; i++){
+                var block = document.createElement("div");
+                block.classList.add("chess-block");
+                block.innerText = this.numberNameLines[i];
+                leftLine.append(block);
+            }
+
+            var rightLine = document.querySelector(".chess-rigth-line");
+            for (var i = 0; i < this.numberNameLines.length; i++){
+                var block = document.createElement("div");
+                block.classList.add("chess-block");
+                block.innerText = this.numberNameLines[i];
+                rightLine.append(block);
+            }
+
+            var board = document.querySelector(".chess-board"),
+                recolor,
+                col = 0,
+                row = 0;
+            for (var i = 0; i < (this.numberNameLines.length * this.numberNameLines.length); i++){
+                var block = document.createElement("div");
+                block.classList.add("chess-block");
+                if (i % this.numberNameLines.length == 0){
+                    recolor = (recolor) ? false : true;
+                    if (i > 0){
+                        col += 1;
+                        row = 0;
+                    }
+                }
+                if (this.figures[col] && this.figures[col][row] && this.figures[col][row].code){
+                    block.classList.add('figure-size');
+                    block.setAttribute("title", this.figures[col][row].figureName);
+                    block.innerHTML = this.figures[col][row].code;
+                }
+                row++;
+                if (i % 2 == recolor) block.classList.add("white-block");
+                board.append(block);
+            }
+        }
+    };
+    game.addChess();
+    alert("Сейчас будет сгенерированно игровое поле и расставлены фигуры.\nОбязательно наведите курсором на каждую.");
+}
