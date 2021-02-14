@@ -292,30 +292,36 @@ $chess-font-figure-mobile: $chess-font-figure / $chess-small;
   background-color: #e9967a;
 }
 
-.chess-top-line,
-.chess-bottom-line{
-  display: flex;
-  margin: 0 $chess-size/10;
-  width: 100%;
-}
-
 .chess-center-line{
   display: flex;
-}
-
-.chess-left-line,
-.chess-rigth-line{
-  display: flex;
-  flex-direction: column;
 }
 
 .chess-top-line,
 .chess-bottom-line,
 .chess-left-line,
 .chess-rigth-line{
+  display: flex;
   .chess-block{
     border: none;
   }
+}
+
+.chess-rigth-line{
+  flex-direction: column-reverse;
+}
+
+.chess-bottom-line{
+  flex-direction: row-reverse;
+}
+
+.chess-left-line{
+  flex-direction: column;
+}
+
+.chess-top-line,
+.chess-bottom-line{
+  margin: 0 $chess-size/10;
+  width: 100%;
 }
 
 .chess-bottom-line,

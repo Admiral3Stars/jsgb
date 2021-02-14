@@ -310,30 +310,19 @@
   background-color: #e9967a;
 }
 
-.chess-top-line,
-.chess-bottom-line {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0 55px;
-  width: 100%;
-}
-
 .chess-center-line {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
+.chess-top-line,
+.chess-bottom-line,
 .chess-left-line,
 .chess-rigth-line {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .chess-top-line .chess-block,
@@ -341,6 +330,33 @@
 .chess-left-line .chess-block,
 .chess-rigth-line .chess-block {
   border: none;
+}
+
+.chess-rigth-line {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+.chess-bottom-line {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.chess-left-line {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.chess-top-line,
+.chess-bottom-line {
+  margin: 0 55px;
+  width: 100%;
 }
 
 .chess-bottom-line,
