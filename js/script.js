@@ -350,8 +350,9 @@ function lessonFourTaskFirst(){
     object.crush();
 }
 
+// Функция для создания шахматной доски
 function chessBoard(){
-
+    // Формируем объект, со свойствами для вёрстки поля, а также данными по фигурам
     var game = {
         element: document.querySelector(".chess"),
         topLine: document.createElement("div"),
@@ -503,8 +504,9 @@ function chessBoard(){
                 }
             }
         },
-
+        // Метод объекта, отвечающий за построение шахматной доски
         addChess: function(){
+            // Определяем классы для каждого элемента
             this.topLine.classList.add("chess-top-line");
             this.centerLine.classList.add("chess-center-line");
             this.rightLine.classList.add("chess-rigth-line");
@@ -512,17 +514,19 @@ function chessBoard(){
             this.leftLine.classList.add("chess-left-line");
             this.board.classList.add("chess-board");
 
-            this.element.innerHTML = ""; // очистим доску
+            this.element.innerHTML = ""; // очистим доску (вдруг кто кликнет дважды)
 
-            this.element.append(this.topLine, this.centerLine, this.bottomLine);
+            this.element.append(this.topLine, this.centerLine, this.bottomLine); // сверстаем основные блоки поля (верх, низ и центр)
 
             var centerLine = document.querySelector(".chess-center-line");
-            centerLine.append(this.leftLine, this.board, this.rightLine);
+            centerLine.append(this.leftLine, this.board, this.rightLine); // Поделим центр на 3 элемента (правая панель, левая и центральная доска)
 
             /* Почему-то append работает только для последнего элемента, пришлось поэтому делать несколько циклов, хотя можно было бы всё сделать в 1, если бы работало:
             topLine.append(block);
             bottomLine.append(block);
             */
+
+            // Ниже наполняем верхний, правый, нижний и левый блок квадратными блоками (что-то вроде ячейки таблицы)
             var topLine = document.querySelector(".chess-top-line");
             for (var i = 0; i < this.stringNameLines.length; i++){
                 var block = document.createElement("div");
@@ -555,30 +559,34 @@ function chessBoard(){
                 rightLine.append(block);
             }
 
+            // А теперь самое главное, наполним блоками центральный блок с фигурами
             var board = document.querySelector(".chess-board"),
-                recolor,
+                recolor, // нужно для смены цвета при переносе строки (иначе будет белый под белым, чёрный под чёрным)
                 col = 0,
-                row = 0;
+                row = 0; // col и row нам понадобятся для определения местоположения фигуры
+            // определяем общее кол-во блоков и запускаем цикл от 0 до этого кол-ва
             for (var i = 0; i < (this.numberNameLines.length * this.numberNameLines.length); i++){
                 var block = document.createElement("div");
                 block.classList.add("chess-block");
-                block.setAttribute("onclick", "alert(\"Пустое поле\");");
-                if (i % this.numberNameLines.length == 0){
+                block.setAttribute("onclick", "alert(\"Пустое поле\");"); // Добавим атрибут onclick для клика. Изначально он будет содержать значение пустого поля
+                // Если произошёл перенос строки, то мы делаем реколор, прибавляем номер строки и обнуляем значение столбца
+                if (i % this.numberNameLines.length == 0){ 
                     recolor = (recolor) ? false : true;
                     if (i > 0){
                         col += 1;
                         row = 0;
                     }
                 }
+                // Проверим, существуют ли нужные свойства, если да, значит в этом поле будет находится фигура. Добавим атрибут для увеличения размера шрифта, всплывающую подсказку, а также ПЕРЕЗАПИШЕМ атрибут onclick со значением имени фигуры
                 if (this.figures[col] && this.figures[col][row] && this.figures[col][row].code){
                     block.classList.add('figure-size');
                     block.setAttribute("title", this.figures[col][row].figureName);
                     block.setAttribute("onclick", "alert(\"" + this.figures[col][row].figureName + "\");");
                     block.innerHTML = this.figures[col][row].code;
                 }
-                row++;
-                if (i % 2 == recolor) block.classList.add("white-block");
-                board.append(block);
+                row++; // идём на следующий стобец по таблице
+                if (i % 2 == recolor) block.classList.add("white-block"); // замена цвета
+                board.append(block); //добавление в конец сформированного выше блока
             }
         }
     };
