@@ -562,6 +562,7 @@ function chessBoard(){
             for (var i = 0; i < (this.numberNameLines.length * this.numberNameLines.length); i++){
                 var block = document.createElement("div");
                 block.classList.add("chess-block");
+                block.setAttribute("onclick", "alert(\"Пустое поле\");");
                 if (i % this.numberNameLines.length == 0){
                     recolor = (recolor) ? false : true;
                     if (i > 0){
@@ -572,6 +573,7 @@ function chessBoard(){
                 if (this.figures[col] && this.figures[col][row] && this.figures[col][row].code){
                     block.classList.add('figure-size');
                     block.setAttribute("title", this.figures[col][row].figureName);
+                    block.setAttribute("onclick", "alert(\"" + this.figures[col][row].figureName + "\");");
                     block.innerHTML = this.figures[col][row].code;
                 }
                 row++;
@@ -581,5 +583,5 @@ function chessBoard(){
         }
     };
     game.addChess();
-    alert("Сейчас будет сгенерированно игровое поле и расставлены фигуры.\nОбязательно наведите курсором на каждую.");
+    alert("Сейчас будет сгенерированно игровое поле и расставлены фигуры.\nОбязательно наведите курсором или кликнете по квадратику поля.");
 }
