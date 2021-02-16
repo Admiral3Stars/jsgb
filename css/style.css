@@ -219,7 +219,8 @@
           align-items: center;
 }
 
-.fourth-task-lesson2-form {
+.fourth-task-lesson2-form,
+.form-center-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -296,6 +297,112 @@
           align-items: center;
 }
 
+.chess {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 10px auto;
+  border: 2px solid black;
+  width: 550px;
+  height: 550px;
+  background-color: #e9967a;
+}
+
+.chess-center-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.chess-top-line,
+.chess-bottom-line,
+.chess-left-line,
+.chess-rigth-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.chess-top-line .chess-block,
+.chess-bottom-line .chess-block,
+.chess-left-line .chess-block,
+.chess-rigth-line .chess-block {
+  border: none;
+}
+
+.chess-rigth-line {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+.chess-bottom-line {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.chess-left-line {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.chess-top-line,
+.chess-bottom-line {
+  margin: 0 55px;
+  width: 100%;
+}
+
+.chess-bottom-line,
+.chess-rigth-line {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.chess-board {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: #a1a1a1;
+}
+
+.chess-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 55px;
+  height: 55px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid black;
+  font-size: 25px;
+  text-transform: uppercase;
+  background-color: transparent;
+}
+
+.figure-size {
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.white-block {
+  background-color: #fff;
+}
+
 .long-button {
   min-width: 170px;
 }
@@ -322,6 +429,35 @@
 
 .form-answer-header {
   text-align: left;
+}
+
+.second-task-lesson4-link {
+  display: block;
+  text-decoration: none;
+  max-width: 150px;
+  text-align: center;
+  text-transform: uppercase;
+  color: black;
+  margin: 5px auto;
+  padding: 6px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "CeraStencilPRO", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  outline: 0;
+  background-color: #fff;
+  border: 1px dashed black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.second-task-lesson4-link:hover {
+  background-color: #fffacd;
+}
+
+.second-task-lesson4-link:active {
+  background-color: #fff;
 }
 
 .site-footer {
@@ -364,8 +500,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0 auto;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  overflow-x: scroll;
 }
 
 .footer-menu-item {
@@ -472,6 +607,22 @@
   .content-section-result {
     width: 100%;
     margin: 0 auto;
+  }
+  .chess {
+    width: 275px;
+    height: 275px;
+  }
+  .chess-top-line,
+  .chess-bottom-line {
+    margin: 0 27.5px;
+  }
+  .chess-block {
+    width: 27.5px;
+    height: 27.5px;
+    font-size: 12.5px;
+  }
+  .figure-size {
+    font-size: 20px;
   }
   .site-footer {
     height: 95px;

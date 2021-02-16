@@ -6,6 +6,13 @@ $h2-size: 20px;
 $h3-size: 18px;
 $footer-height: 120px;
 $footer-mobile-height: 95px;
+$chess-size: 550px;
+$chess-font: 25px;
+$chess-font-figure: 40px;
+$chess-small: 2; // Во сколько раз уменьшим шахматную достуку на мобиле
+$chess-size-mobile: $chess-size / $chess-small;
+$chess-font-mobile: $chess-font / $chess-small;
+$chess-font-figure-mobile: $chess-font-figure / $chess-small;
 
 /* CeraStencilPRO start */
 @font-face {
@@ -210,7 +217,8 @@ $footer-mobile-height: 95px;
   align-items: center;
 }
 
-.fourth-task-lesson2-form{
+.fourth-task-lesson2-form,
+.form-center-button{
   display: flex;
   justify-content: center;
 }
@@ -274,6 +282,81 @@ $footer-mobile-height: 95px;
   align-items: center;
 }
 
+.chess{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px auto;
+  border: 2px solid black;
+  width: $chess-size;
+  height: $chess-size;
+  background-color: #e9967a;
+}
+
+.chess-center-line{
+  display: flex;
+}
+
+.chess-top-line,
+.chess-bottom-line,
+.chess-left-line,
+.chess-rigth-line{
+  display: flex;
+  .chess-block{
+    border: none;
+  }
+}
+
+.chess-rigth-line{
+  flex-direction: column-reverse;
+}
+
+.chess-bottom-line{
+  flex-direction: row-reverse;
+}
+
+.chess-left-line{
+  flex-direction: column;
+}
+
+.chess-top-line,
+.chess-bottom-line{
+  margin: 0 $chess-size/10;
+  width: 100%;
+}
+
+.chess-bottom-line,
+.chess-rigth-line{
+  transform: rotate(180deg);
+}
+
+.chess-board{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #a1a1a1;
+}
+
+.chess-block{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $chess-size/10;
+  height: $chess-size/10;
+  box-sizing: border-box;
+  border: 1px solid black;
+  font-size: $chess-font;
+  text-transform: uppercase;
+  background-color: transparent;
+}
+
+.figure-size{
+  font-size: $chess-font-figure;
+  cursor: pointer;
+}
+
+.white-block{
+  background-color: #fff;
+}
+
 .long-button{
   min-width: 170px;
 }
@@ -298,6 +381,34 @@ $footer-mobile-height: 95px;
 
 .form-answer-header{
   text-align: left;
+}
+
+.second-task-lesson4-link{
+  display: block;
+  text-decoration: none;
+  max-width: 150px;
+  text-align: center;
+  text-transform: uppercase;
+  color: black;
+  margin: 5px auto;
+  padding: 6px;
+  box-sizing: border-box;
+  font-family: "CeraStencilPRO", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: $normal-size;
+  outline: 0;
+  background-color: #fff;
+  border: 1px dashed black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.second-task-lesson4-link:hover{
+  background-color: #fffacd;
+}
+
+.second-task-lesson4-link:active{
+  background-color: #fff;
 }
 
 .site-footer{
@@ -330,7 +441,7 @@ $footer-mobile-height: 95px;
   padding: 0 10px;
   box-sizing: border-box;
   margin: 0 auto;
-  flex-wrap: wrap;
+  overflow-x: scroll;
 }
 
 .footer-menu-item{
@@ -428,6 +539,26 @@ $footer-mobile-height: 95px;
   .content-section-result{
     width: 100%;
     margin: 0 auto;
+  }
+
+  .chess{
+    width: $chess-size-mobile;
+    height: $chess-size-mobile;
+  }
+  
+  .chess-top-line,
+  .chess-bottom-line{
+    margin: 0 $chess-size-mobile / 10;
+  }
+
+  .chess-block{
+    width: $chess-size-mobile/10;
+    height: $chess-size-mobile/10;
+    font-size: $chess-font-mobile;
+  }
+
+  .figure-size{
+    font-size: $chess-font-figure-mobile;
   }
 
   .site-footer{

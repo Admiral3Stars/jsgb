@@ -318,3 +318,278 @@ function lessonTreeTaskFifth(){
         console.log(x += "x");
     }
 }
+
+function crushing(){
+    console.log(this);
+    if (!this.number){
+        console.log(this.error = "Не задано свойство с числом");
+    }else if (this.number < this.min){
+        console.log(this.error = "Число меньше " + this.min);
+    }else if (this.number > this.max){
+        console.log(this.error = "Число больше " + this.max);
+    }else{
+        this.number += ""; // Преобразуем в строку, join() со свойством не работает, может я чего-то не так делаю.
+        var i = -1;
+        for (var n of this.number){
+            i++;
+        }
+        this.unit = this.number[i];
+        this.dozen = (this.number[i-1] === undefined) ? 0 : this.number[i-1];
+        this.hundred = (this.number[i-2] === undefined) ? 0 : this.number[i-2];
+        console.log("сотни: " + this.hundred + " десятки: " + this.dozen + " единицы: " + this.unit);
+    }
+}
+
+function lessonFourTaskFirst(){
+    var object = {
+        min : 0,
+        max : 999,
+        number : parseInt(document.querySelector('.first-task-lesson4-a').value),
+    };
+    object.crush = crushing;
+    object.crush();
+}
+
+// Функция для создания шахматной доски
+function chessBoard(){
+    // Формируем объект, со свойствами для вёрстки поля, а также данными по фигурам
+    var game = {
+        element: document.querySelector(".chess"),
+        topLine: document.createElement("div"),
+        centerLine: document.createElement("div"),
+        rightLine: document.createElement("div"),
+        bottomLine: document.createElement("div"),
+        leftLine: document.createElement("div"),
+        board: document.createElement("div"),
+        stringNameLines: ["a","b","c","d","e","f","g","h"],
+        numberNameLines: ["1","2","3","4","5","6","7","8"],
+        figures:{
+            0: {
+                0: {
+                    figureName: "Ладья",
+                    code: "&#9814;"
+                },
+                1: {
+                    figureName: "Конь",
+                    code: "&#9816;"
+                },
+                2: {
+                    figureName: "Слон",
+                    code: "&#9815;"
+                },
+                3: {
+                    figureName: "Ферзь",
+                    code: "&#9813;"
+                },
+                4: {
+                    figureName: "Король",
+                    code: "&#9812;"
+                },
+                5: {
+                    figureName: "Слон",
+                    code: "&#9815;"
+                },
+                6: {
+                    figureName: "Конь",
+                    code: "&#9816;"
+                },
+                7: {
+                    figureName: "Ладья",
+                    code: "&#9814;"
+                }
+            },
+
+            1: {
+                0: {
+                    figureName: "Пешка",
+                    code: "&#9817;"
+                },
+                1: {
+                    figureName: "Пешка",
+                    code: "&#9817;"
+                },
+                2: {
+                    figureName: "Пешка",
+                    code: "&#9817;"
+                },
+                3: {
+                    figureName: "Пешка",
+                    code: "&#9817;"
+                },
+                4: {
+                    figureName: "Пешка",
+                    code: "&#9817;"
+                },
+                5: {
+                    figureName: "Пешка",
+                    code: "&#9817;"
+                },
+                6: {
+                    figureName: "Пешка",
+                    code: "&#9817;"
+                },
+                7: {
+                    figureName: "Пешка",
+                    code: "&#9817;"
+                }
+            },
+
+            6: {
+                0: {
+                    figureName: "Пешка",
+                    code: "&#9823;"
+                },
+                1: {
+                    figureName: "Пешка",
+                    code: "&#9823;"
+                },
+                2: {
+                    figureName: "Пешка",
+                    code: "&#9823;"
+                },
+                3: {
+                    figureName: "Пешка",
+                    code: "&#9823;"
+                },
+                4: {
+                    figureName: "Пешка",
+                    code: "&#9823;"
+                },
+                5: {
+                    figureName: "Пешка",
+                    code: "&#9823;"
+                },
+                6: {
+                    figureName: "Пешка",
+                    code: "&#9823;"
+                },
+                7: {
+                    figureName: "Пешка",
+                    code: "&#9823;"
+                }
+            },
+            
+            7: {
+                0: {
+                    figureName: "Ладья",
+                    code: "&#9820;"
+                },
+                1: {
+                    figureName: "Конь",
+                    code: "&#9822;"
+                },
+                2: {
+                    figureName: "Слон",
+                    code: "&#9821;"
+                },
+                3: {
+                    figureName: "Ферзь",
+                    code: "&#9819;"
+                },
+                4: {
+                    figureName: "Король",
+                    code: "&#9818;"
+                },
+                5: {
+                    figureName: "Слон",
+                    code: "&#9821;"
+                },
+                6: {
+                    figureName: "Конь",
+                    code: "&#9822;"
+                },
+                7: {
+                    figureName: "Ладья",
+                    code: "&#9820;"
+                }
+            }
+        },
+        // Метод объекта, отвечающий за построение шахматной доски
+        addChess: function(){
+            // Определяем классы для каждого элемента
+            this.topLine.classList.add("chess-top-line");
+            this.centerLine.classList.add("chess-center-line");
+            this.rightLine.classList.add("chess-rigth-line");
+            this.bottomLine.classList.add("chess-bottom-line");
+            this.leftLine.classList.add("chess-left-line");
+            this.board.classList.add("chess-board");
+
+            this.element.innerHTML = ""; // очистим доску (вдруг кто кликнет дважды)
+
+            this.element.append(this.topLine, this.centerLine, this.bottomLine); // сверстаем основные блоки поля (верх, низ и центр)
+
+            var centerLine = document.querySelector(".chess-center-line");
+            centerLine.append(this.leftLine, this.board, this.rightLine); // Поделим центр на 3 элемента (правая панель, левая и центральная доска)
+
+            /* Почему-то append работает только для последнего элемента, пришлось поэтому делать несколько циклов, хотя можно было бы всё сделать в 1, если бы работало:
+            topLine.append(block);
+            bottomLine.append(block);
+            */
+
+            // Ниже наполняем верхний, правый, нижний и левый блок квадратными блоками (что-то вроде ячейки таблицы)
+            var topLine = document.querySelector(".chess-top-line");
+            for (var i = 0; i < this.stringNameLines.length; i++){
+                var block = document.createElement("div");
+                block.classList.add("chess-block");
+                block.innerText = this.stringNameLines[i];
+                topLine.append(block);
+            }
+
+            var bottomLine = document.querySelector(".chess-bottom-line");
+            for (var i = 0; i < this.stringNameLines.length; i++){
+                var block = document.createElement("div");
+                block.classList.add("chess-block");
+                block.innerText = this.stringNameLines[i];
+                bottomLine.append(block);
+            }
+
+            var leftLine = document.querySelector(".chess-left-line");
+            for (var i = 0; i < this.numberNameLines.length; i++){
+                var block = document.createElement("div");
+                block.classList.add("chess-block");
+                block.innerText = this.numberNameLines[i];
+                leftLine.append(block);
+            }
+
+            var rightLine = document.querySelector(".chess-rigth-line");
+            for (var i = 0; i < this.numberNameLines.length; i++){
+                var block = document.createElement("div");
+                block.classList.add("chess-block");
+                block.innerText = this.numberNameLines[i];
+                rightLine.append(block);
+            }
+
+            // А теперь самое главное, наполним блоками центральный блок с фигурами
+            var board = document.querySelector(".chess-board"),
+                recolor, // нужно для смены цвета при переносе строки (иначе будет белый под белым, чёрный под чёрным)
+                col = 0,
+                row = 0; // col и row нам понадобятся для определения местоположения фигуры
+            // определяем общее кол-во блоков и запускаем цикл от 0 до этого кол-ва
+            for (var i = 0; i < (this.numberNameLines.length * this.numberNameLines.length); i++){
+                var block = document.createElement("div");
+                block.classList.add("chess-block");
+                block.setAttribute("onclick", "alert(\"Пустое поле\");"); // Добавим атрибут onclick для клика. Изначально он будет содержать значение пустого поля
+                // Если произошёл перенос строки, то мы делаем реколор, прибавляем номер строки и обнуляем значение столбца
+                if (i % this.numberNameLines.length == 0){ 
+                    recolor = (recolor) ? false : true;
+                    if (i > 0){
+                        col += 1;
+                        row = 0;
+                    }
+                }
+                // Проверим, существуют ли нужные свойства, если да, значит в этом поле будет находится фигура. Добавим атрибут для увеличения размера шрифта, всплывающую подсказку, а также ПЕРЕЗАПИШЕМ атрибут onclick со значением имени фигуры
+                if (this.figures[col] && this.figures[col][row] && this.figures[col][row].code){
+                    block.classList.add('figure-size');
+                    block.setAttribute("title", this.figures[col][row].figureName);
+                    block.setAttribute("onclick", "alert(\"" + this.figures[col][row].figureName + "\");");
+                    block.innerHTML = this.figures[col][row].code;
+                }
+                row++; // идём на следующий стобец по таблице
+                if (i % 2 == recolor) block.classList.add("white-block"); // замена цвета
+                board.append(block); //добавление в конец сформированного выше блока
+            }
+        }
+    };
+    game.addChess();
+    alert("Сейчас будет сгенерированно игровое поле и расставлены фигуры.\nОбязательно наведите курсором или кликнете по квадратику поля.");
+}
