@@ -17,6 +17,12 @@ window.addEventListener("load", function() {
             element.classList.add("site-footer-close");
         }
     };
+
+    // Увеличим изображение
+    var images = document.querySelectorAll(".images-item");
+    for (var val of images){
+        val.onclick = imgBigSmall;
+    }
 });
 
 function insertValueToSelector($selector, $value, $operator = "add more"){
@@ -592,4 +598,24 @@ function chessBoard(){
     };
     game.addChess();
     alert("Сейчас будет сгенерированно игровое поле и расставлены фигуры.\nОбязательно наведите курсором или кликнете по квадратику поля.");
+}
+
+function imgBigSmall(e){
+    var image = e.target,
+        bigImage = new Image;
+        bigImage.src = image.src.replace("/small/", "/big/");
+
+        bigImage.onload = function(){
+            var site = document.querySelector(".web-site"),
+                bigBlock = document.createElement("div");
+            bigBlock.setAttribute("onclick", "var elem = document.querySelector(\".site-images-big\"); elem.parentNode.removeChild(elem);");
+            bigImage.className = "images-big-item";
+            bigBlock.classList.add("site-images-big");
+            bigBlock.append(bigImage);
+            site.append(bigBlock);
+        }
+
+        bigImage.onerror = function(){
+            alert("Не найдена большая картинка");
+        }
 }
