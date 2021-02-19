@@ -220,6 +220,7 @@ $chess-font-figure-mobile: $chess-font-figure / $chess-small;
 .fourth-task-lesson2-form,
 .form-center-button{
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -395,6 +396,18 @@ $chess-font-figure-mobile: $chess-font-figure / $chess-small;
   overflow-y: auto;
 }
 
+.content-cart{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-item{
+  display: flex;
+  flex-direction: column;
+  border: 1px dashed black;
+}
+
 .disable-button:hover{
   background-color: #fff;
 }
@@ -544,6 +557,7 @@ $chess-font-figure-mobile: $chess-font-figure / $chess-small;
 
   .content-form{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
   }
