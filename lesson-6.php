@@ -54,12 +54,6 @@
             </div>
             </form>
         </section>
-        <section class="section-tasks">
-            <p class="content-text">Задача #3. Добавить в&nbsp;галерею функцию перехода к&nbsp;следующему изображению. По&nbsp;сторонам от&nbsp;большой картинки должны быть стрелки &laquo;вперед&raquo; и&nbsp;&laquo;назад&raquo;, по&nbsp;нажатию на&nbsp;которые происходит замена изображения на&nbsp;следующее или предыдущее.</p>
-            <form class="content-form form-center-button" action="javascript:void(0)">
-                <button class="content-form-button" onclick="">Выполнить</button></p>
-            </form>
-        </section>
     </main>
     <footer class="site-footer">
         <? include_once "footer.php"; ?>
