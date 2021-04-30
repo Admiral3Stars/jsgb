@@ -17,6 +17,18 @@ window.addEventListener("load", function() {
             element.classList.add("site-footer-close");
         }
     };
+
+    // Увеличим изображение
+    var images = document.querySelectorAll(".images-item");
+    for (var val of images){
+        val.onclick = imgBigSmall;
+    }
+
+    // Корзина магазина
+    var prodButton = document.querySelectorAll(".shop");
+    for (var val of prodButton){
+        val.onclick = cart;
+    }
 });
 
 function insertValueToSelector($selector, $value, $operator = "add more"){
@@ -592,4 +604,89 @@ function chessBoard(){
     };
     game.addChess();
     alert("Сейчас будет сгенерированно игровое поле и расставлены фигуры.\nОбязательно наведите курсором или кликнете по квадратику поля.");
+}
+
+function imgBigSmall(e){
+    var image = e.target,
+        bigImage = new Image;
+        bigImage.src = image.src.replace("/small/", "/big/");
+
+        bigImage.onload = function(){
+            var site = document.querySelector(".web-site"),
+                bigBlock = document.createElement("div");
+            bigBlock.setAttribute("onclick", "var elem = document.querySelector(\".site-images-big\"); elem.parentNode.removeChild(elem);");
+            bigImage.className = "images-big-item";
+            bigBlock.classList.add("site-images-big");
+            bigBlock.append(bigImage);
+            site.append(bigBlock);
+        }
+
+        bigImage.onerror = function(){
+            alert("Не найдена большая картинка");
+        }
+}
+
+function cart(e){
+    var prod = e.target.parentNode,
+        pId = prod.getAttribute("data-id"),
+        pName = prod.querySelector(".item-box-text").innerText,
+        pQuantity = prod.querySelector(".item-box-quantity").value,
+        pPrice = prod.querySelector(".item-box-price").getAttribute("data-price"),
+        cart = document.querySelector(".content-cart"),
+        items = cart.querySelectorAll(".cart-item"),
+        i = false,
+        total = 0;
+
+        if (pQuantity < 1){
+            return alert ("Вы не ввели кол-во");
+        }
+
+        for (var val of items){
+            if (val.getAttribute("data-id") == pId){
+                i = true;
+            }
+        }
+
+        if (!i){
+            var pblock = document.createElement("div"),
+                pNameText = document.createElement("span"),
+                pQuantityText = document.createElement("span"),
+                pPriceText = document.createElement("span"),
+                pTotalText = document.createElement("span");
+
+            pblock.className = "cart-item";
+            pNameText.className = "cart-item-name";
+            pQuantityText.className = "cart-item-quantity";
+            pPriceText.className = "cart-item-price";
+            pTotalText.className = "cart-item-total";
+            pNameText.innerText = pName;
+            pblock.setAttribute("data-id", pId);
+
+            pblock.append(pNameText, pQuantityText, pPriceText, pTotalText);
+            cart.append(pblock);
+        }
+
+        items = cart.querySelectorAll(".cart-item");
+        for (var val of items){
+            if (val.getAttribute("data-id") == pId){
+                
+                val.querySelector(".cart-item-quantity").innerHTML = pQuantity + " шт.";
+                val.querySelector(".cart-item-price").innerHTML = parseInt(pPrice).toFixed(2) + " &#8381;";
+                var subtotal = val.querySelector(".cart-item-total");
+                subtotal.innerHTML = "Сумма: " + parseInt(pPrice * pQuantity).toFixed(2) + " &#8381;";
+                subtotal.setAttribute("data-total", parseInt(pPrice * pQuantity).toFixed(2));
+
+            }
+            total += parseInt(val.querySelector(".cart-item-total").getAttribute("data-total"));
+            console.log(total);
+        }
+        var totalBlock = document.querySelector(".cart-total");
+        if (!totalBlock){
+            totalBlock = document.createElement("div");
+            totalBlock.className = "cart-total";
+            totalBlock.innerHTML = "Общая сумма заказа: " + parseInt(total).toFixed(2) + " &#8381;";
+        }else{
+            totalBlock.innerHTML = "Общая сумма заказа: " + parseInt(total).toFixed(2) + " &#8381;";
+        }
+        cart.append(totalBlock);
 }

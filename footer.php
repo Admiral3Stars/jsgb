@@ -20,4 +20,12 @@
         <? include "footer-menu-svg.php"; ?>
         <span class="footer-menu-item-text">Урок 5</span>
     </a>
+    <a class="footer-menu-item" href="lesson-6.php">
+        <? include "footer-menu-svg.php"; ?>
+        <span class="footer-menu-item-text">Урок 6</span>
+    </a>
+    <a class="footer-menu-item" href="lesson-7.php">
+        <? include "footer-menu-svg.php"; ?>
+        <span class="footer-menu-item-text">Урок 7</span>
+    </a>
 </nav>
